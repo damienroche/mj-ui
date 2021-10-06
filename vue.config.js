@@ -17,5 +17,10 @@ module.exports = {
     msTileColor: emerald['600'],
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
+  },
+  configureWebpack: {
+    plugins: [
+      require('unplugin-vue-components/webpack')({})
+    ]
   }
 };

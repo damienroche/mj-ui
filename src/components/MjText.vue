@@ -4,6 +4,7 @@
     :class="{
       'text-navy dark_text-white': type === 'normal',
       'text-ternary dark_text-gray-500': type === 'ternary',
+      'text-gray-500 dark_text-dark-100': type === 'gray-500',
       'select-none': !select
     }"
   >

@@ -8,6 +8,53 @@
       </div>
     </mj-card>
 
+    <mj-card class="my-4 w-[430px]">
+      <div class="p-4">
+        <div class="flex items-center gap-2 justify-between">
+          <div class="flex items-center gap-2">
+            <mj-head-tag-counter :count="632" />
+            <mj-text class="font-bold text-base">Interventions</mj-text>
+            <mj-text class="text-xs">Depuis le 07/02/2020</mj-text>
+          </div>
+          <div class="w-5 h-5">
+            <mj-text type="gray-500">
+              <svg width="100%" height="100%" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5z" fill="currentColor"></path></svg>
+            </mj-text>
+          </div>
+        </div>
+      </div>
+      <mj-fixed-height class="px-3">
+        <mj-list-item
+          v-for="i in 30"
+          :key="i"
+        >
+          <div class="flex items-center gap-2">
+            <div class="flex flex-col gap-4 flex-1">
+              <div class="flex items-start justify-between gap-2">
+                <div></div>
+                <div class="text-right flex flex-col gap-1 leading-none">
+                  <mj-text type="ternary" class="text-xxxs">Ref. interne :</mj-text>
+                  <mj-text class="animation duration-150 group-hover_text-brand text-xs font-semibold">C-SESGN-33336</mj-text>
+                </div>
+              </div>
+              <div class="flex items-start justify-between gap-2">
+                <div></div>
+                <div class="text-right flex flex-col gap-1 leading-none">
+                  <mj-text type="ternary" class="text-xxxs">Date :</mj-text>
+                  <mj-text class="animation duration-150 group-hover_text-brand text-xs font-semibold">28/08/2021</mj-text>
+                </div>
+              </div>
+            </div>
+            <div class="animation duration-150 group-hover_text-brand">Arrow</div>
+          </div>
+        </mj-list-item>
+      </mj-fixed-height>
+      <mj-card-footer class="flex flex-col gap-2">
+        <mj-button type="secondary" class="w-full">Toutes les interventions</mj-button>
+        <mj-add-button title="Nouvelle intervention" class="w-full" />
+      </mj-card-footer>
+    </mj-card>
+
     <mj-card class="p-4 my-4 w-[430px]">
       <h2 class="text-navy dark_text-white font-semibold mb-4">Formulaire</h2>
       <form @submit.prevent="submitForm">

@@ -4,7 +4,7 @@
     :style="styles"
     v-bind="$attrs"
     :class="{
-      'bg-navy text-white hover_bg-navy-dark': type === 'primary',
+      'bg-navy text-white hover_bg-navy-dark focus_bg-navy': type === 'primary',
       'bg-gray-200 text-ternary hover_bg-gray-400 border border-gray-400 dark_bg-dark-200 dark_text-white dark_border-transparent dark_hover_bg-dark-300': type === 'secondary',
       'bg-brand text-white hover_bg-brand-dark': type === 'brand',
       'bg-success text-white hover_bg-success-dark': type === 'success',

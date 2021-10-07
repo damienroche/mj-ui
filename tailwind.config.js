@@ -1,5 +1,21 @@
 const BRAND_COLOR = '#4687bf';
 
+const ASSIGNMENT_STATUS_COLORS = {
+  accepted: '#353535',
+  inProgress: '#398fca',
+  delayed: '#ec8c32',
+  scheduled: '#B09D8B',
+  incoming: '#945BFF',
+  toCheck: '#D6AA4B',
+  finished: '#67BB80',
+  canceled: '#FF5555',
+  created: '#d568be',
+  invoiced: '#6e73be',
+  toBeInvoiced: '#955151',
+  unscheduled: '#8B9AB0',
+  paid: '#955151'
+};
+
 const COLORS = {
   brand: {
     light: '#ebf3f8',
@@ -57,7 +73,7 @@ module.exports = {
   },
   theme: {
     extend: {
-      colors: COLORS,
+      colors: { ...COLORS, ...ASSIGNMENT_STATUS_COLORS },
       fontFamily: {
         sans: [
           '"Montserrat"',

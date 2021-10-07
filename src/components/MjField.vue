@@ -1,10 +1,10 @@
 <template>
   <div>
     <label
-      class="flex items-center justify-between gap-2"
+      class="flex justify-between gap-2"
       :class="{
         'flex-col': orientation === 'vertical',
-        'flex-row': orientation === 'horizontal'
+        'flex-row items-center': orientation === 'horizontal'
       }"
     >
       <div class="text-xxxs w-full">

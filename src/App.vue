@@ -8,6 +8,85 @@
       </div>
     </mj-card>
 
+    <mj-card>
+      <div class="rounded overflow-hidden">
+        <mj-google-map />
+      </div>
+      <div class="rounded overflow-hidden">
+        <mj-google-map height="300px" :show-controls="false" :center="{ latitude: 42.299482, longitude: 6.38978 }" />
+      </div>
+    </mj-card>
+
+    <mj-card class="my-4 w-[430px]">
+      <div class="p-4">
+        <div class="flex items-center justify-between gap-2 mb-4">
+          <div class="leading-none">
+            <mj-text class="inline-flex items-center gap-2">
+              <div class="w-5 h-5">
+                <mj-campaign-icon />
+              </div>
+              <span class="text-lg font-extrabold">INT-0628</span>
+            </mj-text>
+            <mj-text type="ternary" class="block text-xxs">ID de campagne</mj-text>
+          </div>
+          <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable>
+            <mj-edit-icon />
+          </mj-text>
+        </div>
+
+        <div class="h-[40px] bg-inProgress rounded items-center justify-center flex select-none mb-2">
+          <div class="text-xs font-bold text-white">En cours</div>
+        </div>
+
+        <mj-flex-centered>
+          <div class="flex flex-col items-center gap-1 leading-none">
+            <mj-text type="ternary" class="text-xxxs">Référence interne :</mj-text>
+            <mj-text class="text-[13px] font-semibold">C-SESGN-6666</mj-text>
+          </div>
+        </mj-flex-centered>
+        <mj-field label="Types d'interventions :" class="mt-4">
+          <div class="flex items-center gap-3">
+            <mj-head-tag-counter :count="6" />
+            <mj-text class="text-xs font-semibold">Curage de canalisations non visitables</mj-text>
+          </div>
+          <div class="flex items-center gap-3">
+            <mj-head-tag-counter :count="13" />
+            <mj-text class="text-xs font-semibold">Pompage/Nettoyage</mj-text>
+          </div>
+          <div class="flex items-center gap-3">
+            <mj-head-tag-counter :count="2" />
+            <mj-text class="text-xs font-semibold">Dépotage</mj-text>
+          </div>
+        </mj-field>
+        <mj-field label="Natures du réseau :" class="mt-4">
+          <div class="flex items-center gap-3">
+            <mj-head-tag-counter :count="6" />
+            <mj-text class="text-xs font-semibold">Eaux industrielles</mj-text>
+          </div>
+          <div class="flex items-center gap-3">
+            <mj-head-tag-counter :count="13" />
+            <mj-text class="text-xs font-semibold">Lorem ipsum</mj-text>
+          </div>
+        </mj-field>
+        <mj-field label="Pré-chiffrage :" class="mt-4">
+          <mj-text class="text-xs font-semibold">2 000</mj-text>
+        </mj-field>
+        <mj-horizontal-border class="my-4" />
+        <mj-field label="Agence réalisatrice :">
+          <mj-text class="block uppercase font-bold text-xs">LOREM IPSUM DOLOR</mj-text>
+          <mj-text class="block text-xs">139 avenue Pasteur, Batiment C - RDC, <br /> 93200 Saint-Denis, FR</mj-text>
+        </mj-field>
+      </div>
+      <mj-card-footer>
+        <div class="flex items-center justify-center gap-1">
+          <mj-text type="gray-500" class="w-4 h-4 flex-none block">
+            <mj-clock-icon />
+          </mj-text>
+          <mj-text type="ternary" class="text-xxxs">Fiche campagne créée le 12/09/2020</mj-text>
+        </div>
+      </mj-card-footer>
+    </mj-card>
+
     <mj-card class="my-4 w-[430px]">
       <div class="p-4">
         <div class="flex items-center gap-2 justify-between">
@@ -28,7 +107,7 @@
           v-for="i in 30"
           :key="i"
         >
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-4">
             <div class="flex flex-col gap-4 flex-1">
               <div class="flex items-start justify-between gap-2">
                 <div></div>
@@ -45,7 +124,9 @@
                 </div>
               </div>
             </div>
-            <div class="animation duration-150 group-hover_text-brand">Arrow</div>
+            <mj-text class="animation duration-150 group-hover_text-brand" type="gray-500">
+              <svg width="1em" height="1em" viewBox="0 0 24 24"><path d="M8.586 5.586a2 2 0 0 0 0 2.828L12.171 12l-3.585 3.586a2 2 0 1 0 2.828 2.828L17.829 12l-6.415-6.414a2 2 0 0 0-2.828 0z" fill="currentColor"></path></svg>
+            </mj-text>
           </div>
         </mj-list-item>
       </mj-fixed-height>
@@ -53,6 +134,23 @@
         <mj-button type="secondary" class="w-full">Toutes les interventions</mj-button>
         <mj-add-button title="Nouvelle intervention" class="w-full" />
       </mj-card-footer>
+    </mj-card>
+
+    <mj-card class="p-4 my-4 w-[430px]">
+      <mj-tab-wrapper>
+        <mj-tab title="Tab 1">
+          <mj-text class="my-3 block text-xs">Contenu tab 1</mj-text>
+        </mj-tab>
+        <mj-tab title="Tab 2">
+          <mj-text class="my-3 block text-xs">Contenu tab 2</mj-text>
+        </mj-tab>
+        <mj-tab title="Tab 3">
+          <mj-text class="my-3 block text-xs">Contenu tab 3</mj-text>
+        </mj-tab>
+        <mj-tab title="Tab 4" disabled>
+          <mj-text class="my-3 block text-xs">Contenu tab 4</mj-text>
+        </mj-tab>
+      </mj-tab-wrapper>
     </mj-card>
 
     <mj-card class="p-4 my-4 w-[430px]">

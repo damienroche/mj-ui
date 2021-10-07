@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="hover_bg-brand-light animation duration-150 p-5 rounded group dark_hover_bg-dark-300">
+    <component
+      :is="tag"
+      class="hover_bg-brand-light animation duration-150 p-5 rounded group dark_hover_bg-dark-300"
+    >
       <slot />
-    </div>
+    </component>
     <mj-horizontal-border v-if="showBorder" />
   </div>
 </template>
@@ -14,6 +17,11 @@ export default {
     showBorder: {
       type: Boolean,
       default: true
+    },
+    tag: {
+      type: String,
+      default: 'div',
+      validator: value => ['div', 'a', 'li', 'router-link'].indexOf(value) >= 0
     }
   }
 };

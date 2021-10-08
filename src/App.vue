@@ -9,7 +9,10 @@
     </mj-card>
 
     <mj-card class="my-4 p-4">
-      <mj-button @click="toast">Ouvrir toast</mj-button>
+      <div class="flex flex-wrap gap-2">
+      <mj-button @click="toast">Ouvrir toast permanent</mj-button>
+      <mj-button v-if="indefiniteToast" @click="removeIndefiniteToast">Supprimer toast permanent</mj-button>
+      </div>
     </mj-card>
 
     <mj-card class="my-4 p-4 w-[430px]">
@@ -385,7 +388,8 @@ export default {
     return {
       loading: false,
       isDark: false,
-      mapStyle: 'roadmap'
+      mapStyle: 'roadmap',
+      indefiniteToast: null
     };
   },
   mounted() {
@@ -412,11 +416,17 @@ export default {
       alert('Submit form');
     },
     toast() {
-      Toast.open({
+      this.indefiniteToast = Toast.open({
         message: 'coucou',
         indefinite: true,
-        type: 'success'
+        type: 'brand'
       });
+    },
+    removeIndefiniteToast() {
+      if (this.indefiniteToast) {
+        this.indefiniteToast.close();
+        this.indefiniteToast = null;
+      }
     }
   }
 };

@@ -118,5 +118,5 @@ body {
 }
 
 .notices .toast {
-  @apply inline-flex my-2 text-center shadow-lg p-2 px-4 pointer-events-auto opacity-90 rounded-full;
+  @apply inline-flex my-2 text-center shadow-lg py-4 px-8 pointer-events-auto opacity-90 rounded-full;
 }

@@ -8,8 +8,10 @@
       class="toast"
       :class="[
         {
-          'bg-gray-200 dark_bg-dark-200': type === 'normal',
-          'bg-success dark_bg-success': type === 'success'
+          'bg-white dark_bg-dark-200': type === 'normal',
+          'bg-success dark_bg-success': type === 'success',
+          'bg-danger dark_bg-danger': type === 'danger',
+          'bg-brand dark_bg-brand': type === 'brand'
         },
         position
       ]"
@@ -23,7 +25,6 @@
       </template>
       <template v-else>
         <div
-          class="text-sm font-semibold"
           :class="{
             'text-navy dark_text-white': type === 'normal',
             'text-white': type !== 'normal'

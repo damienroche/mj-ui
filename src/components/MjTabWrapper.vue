@@ -55,7 +55,8 @@ export default {
   data() {
     return {
       tabTitles: [],
-      selectedTab: null
+      selectedTab: null,
+      disabledTabs: []
     };
   },
   created() {

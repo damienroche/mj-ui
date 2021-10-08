@@ -9,6 +9,36 @@
     </mj-card>
 
     <mj-card class="my-4 p-4">
+      <mj-stepper>
+        <div slot="header" slot-scope="{ currentStep }" class="text-center my-4 h-8">
+          <mj-text class="font-medium text-lg">{{ currentStep }}</mj-text>
+        </div>
+        <mj-step title="Étape 1 : Activité">
+          <div class="my-4">
+            Détails de l'activité...
+          </div>
+        </mj-step>
+        <mj-step title="Étape 2 : Planification de l'intervention">
+          <div class="my-4">
+            L'étape de la planification
+          </div>
+        </mj-step>
+        <mj-step title="Étape 3 : Notifications">
+          <div class="my-4">
+            Les Notifications
+          </div>
+        </mj-step>
+        <div slot="footer" slot-scope="{ currentIndex, goNext, goPrevious, count }" class="flex gap-4">
+          <mj-button type="secondary" @click="goPrevious">Étape précédente</mj-button>
+          <mj-button @click="goNext">
+            <span v-if="currentIndex < count - 1">Suivant</span>
+            <span v-else>Valider</span>
+          </mj-button>
+        </div>
+      </mj-stepper>
+    </mj-card>
+
+    <mj-card class="my-4 p-4">
       <mj-button @click="toast">Ouvrir toast</mj-button>
     </mj-card>
 

@@ -120,3 +120,55 @@ body {
 .notices .toast {
   @apply inline-flex my-2 text-center shadow-lg p-2 px-4 pointer-events-auto opacity-90 rounded-full;
 }
+
+.mj-stepper .step {
+  @apply flex-1 flex justify-start pointer-events-none items-center relative;
+}
+
+.mj-stepper .step::after,
+.mj-stepper .step::before {
+  content: '';
+  height: 3px;
+  z-index: 1;
+  @apply absolute w-full left-0 right-0;
+}
+
+.mj-stepper .step::after {
+  transition: .2s ease-in-out;
+  will-change: width;
+  @apply bg-brand opacity-0 w-0;
+}
+
+.mj-stepper .step::before {
+  @apply bg-gray-200 dark_bg-dark-200;
+}
+
+.mj-stepper .step .step-icon {
+  height: 25px;
+  width: 25px;
+  z-index: 2;
+
+  @apply rounded-full bg-gray-100 dark_bg-dark-100 border-2 border-gray-200 dark_border-dark-200 inline-flex justify-center items-center;
+}
+
+.mj-stepper .step.is-complete::after {
+  @apply opacity-100 w-full;
+}
+
+.mj-stepper .step.is-complete .step-icon {
+  @apply border-brand bg-brand;
+}
+
+.mj-stepper .step.is-current .step-icon {
+  @apply border-navy;
+}
+
+.mj-stepper .step:last-child,
+.mj-stepper .step:last-child .step-icon {
+  @apply flex-none;
+}
+
+.mj-stepper .step:last-child::before,
+.mj-stepper .step:last-child::after {
+  display: none;
+}

@@ -29,7 +29,7 @@
           </div>
         </mj-step>
         <div slot="footer" slot-scope="{ currentIndex, goNext, goPrevious, count }" class="flex gap-4">
-          <mj-button type="secondary" @click="goPrevious">Étape précédente</mj-button>
+          <mj-button v-if="currentIndex > 0" type="secondary" @click="goPrevious" >Étape précédente</mj-button>
           <mj-button @click="goNext">
             <span v-if="currentIndex < count - 1">Suivant</span>
             <span v-else>Valider</span>

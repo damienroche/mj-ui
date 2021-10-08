@@ -8,13 +8,70 @@
       </div>
     </mj-card>
 
-    <mj-card>
-      <div class="rounded overflow-hidden">
-        <mj-google-map />
+    <mj-card class="my-4 p-4">
+      <mj-button @click="toast">Ouvrir toast</mj-button>
+    </mj-card>
+
+    <mj-card class="my-4 p-4 w-[430px]">
+      <div class="flex items-center justify-between gap-4">
+        <mj-text class="text-base font-bold">Notifications</mj-text>
+        <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable>
+          <mj-edit-icon />
+        </mj-text>
       </div>
-      <div class="rounded overflow-hidden">
-        <mj-google-map height="300px" :show-controls="false" :center="{ latitude: 42.299482, longitude: 6.38978 }" />
+      <div class="my-4">
+        <div class="my-px flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-2 pl-4 pr-2 rounded">
+          <mj-text class="text-xs flex-1"> Informer le client de la planification du contrat </mj-text>
+          <mj-true-false :value="true" />
+        </div>
+        <div class="my-px flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-2 pl-4 pr-2 rounded">
+          <mj-text class="text-xs flex-1"> Lorsque toutes les interventions seront planifiées </mj-text>
+          <mj-true-false :value="false" />
+        </div>
+        <div class="my-px flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-2 pl-4 pr-2 rounded">
+          <mj-text class="text-xs flex-1"> Informer le client de la fin du contrat </mj-text>
+          <mj-true-false :value="true" />
+        </div>
+        <div class="my-px flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-2 pl-4 pr-2 rounded">
+          <mj-text class="text-xs flex-1"> Lorsque toutes les interventions seront terminées </mj-text>
+          <mj-true-false :value="false" />
+        </div>
+        <div class="my-px flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-2 pl-4 pr-2 rounded">
+          <mj-text class="text-xs flex-1"> Définir une date personnalisée </mj-text>
+          <mj-true-false :value="false" />
+        </div>
+        <mj-field class="mt-3" label="Alert SMS + Email :">
+          <div class="flex flex-wrap gap-2">
+            <mj-tag>antoine.delorme@gmail.com</mj-tag>
+            <mj-tag>0638953929</mj-tag>
+          </div>
+        </mj-field>
       </div>
+    </mj-card>
+
+    <mj-card class="my-4 w-[430px]">
+      <div class="p-4">
+        <div class="flex items-center gap-4">
+          <mj-head-tag-counter :count="6" />
+          <mj-text class="text-base font-bold">Documents réglementaires</mj-text>
+        </div>
+        <div class="my-4">
+        </div>
+        <mj-list-item
+          v-for="i in 7"
+          :key="i"
+          :show-border="i !== 7"
+          hoverable
+        >
+          <div class="flex flex-col gap-1 leading-none">
+            <mj-text class="font-semibold text-xs">Intitulé_document_reglementaire_01.txt</mj-text>
+            <mj-text type="ternary" class="text-xxxxs">Importé le 10/11/2019</mj-text>
+          </div>
+        </mj-list-item>
+      </div>
+      <mj-card-footer>
+        <mj-add-button title="Ajouter un document réglementaire" class="w-full" />
+      </mj-card-footer>
     </mj-card>
 
     <mj-card class="my-4 w-[430px]">
@@ -106,6 +163,7 @@
         <mj-list-item
           v-for="i in 30"
           :key="i"
+          hoverable
         >
           <div class="flex items-center gap-4">
             <div class="flex flex-col gap-4 flex-1">
@@ -113,18 +171,18 @@
                 <div></div>
                 <div class="text-right flex flex-col gap-1 leading-none">
                   <mj-text type="ternary" class="text-xxxs">Ref. interne :</mj-text>
-                  <mj-text class="animation duration-150 group-hover_text-brand text-xs font-semibold">C-SESGN-33336</mj-text>
+                  <mj-text class="duration-150 group-hover_text-brand text-xs font-semibold">C-SESGN-33336</mj-text>
                 </div>
               </div>
               <div class="flex items-start justify-between gap-2">
                 <div></div>
                 <div class="text-right flex flex-col gap-1 leading-none">
                   <mj-text type="ternary" class="text-xxxs">Date :</mj-text>
-                  <mj-text class="animation duration-150 group-hover_text-brand text-xs font-semibold">28/08/2021</mj-text>
+                  <mj-text class="duration-150 group-hover_text-brand text-xs font-semibold">28/08/2021</mj-text>
                 </div>
               </div>
             </div>
-            <mj-text class="animation duration-150 group-hover_text-brand" type="gray-500">
+            <mj-text class="duration-150 group-hover_text-brand" type="gray-500">
               <svg width="1em" height="1em" viewBox="0 0 24 24"><path d="M8.586 5.586a2 2 0 0 0 0 2.828L12.171 12l-3.585 3.586a2 2 0 1 0 2.828 2.828L17.829 12l-6.415-6.414a2 2 0 0 0-2.828 0z" fill="currentColor"></path></svg>
             </mj-text>
           </div>
@@ -319,6 +377,7 @@
 </template>
 
 <script>
+import { Toast } from './programmatic-components/MjToast';
 
 export default {
   name: 'App',
@@ -351,6 +410,13 @@ export default {
     },
     submitForm() {
       alert('Submit form');
+    },
+    toast() {
+      Toast.open({
+        message: 'coucou',
+        indefinite: true,
+        type: 'success'
+      });
     }
   }
 };

@@ -6,7 +6,7 @@ import router from './router';
 Vue.use(VueCompositionAPI);
 
 Vue.config.productionTip = process.env.NODE_ENV === 'development';
-
+window.Vue = Vue;
 new Vue({
   name: 'App',
   router,

@@ -1,9 +1,9 @@
 <template>
   <span
     v-bind="$attrs"
-    class="h-[30px] rounded-full text-xs select-none px-3 inline-flex items-center justify-between gap-2 font-semibold animation duration-150"
+    class="h-[30px] rounded-full text-xs select-none px-3 inline-flex items-center justify-between gap-2 font-semibold duration-150"
     :class="{
-      'text-navy dark_text-white border border-gray-400': type === 'hollow',
+      'text-navy dark_text-gray-400 border border-gray-400': type === 'hollow',
       'text-ternary dark_text-gray-500': type === 'ternary',
       'hover_bg-navy hover_text-white dark_hover_bg-white dark_hover_text-navy': interactive
     }"

@@ -16,7 +16,7 @@
           'rounded-full': rounded,
           'cursor-not-allowed': disabledTabs.indexOf(title) > -1
         }"
-        class=" flex items-center justify-center flex-1 cursor-pointer animation duration-150 select-none"
+        class=" flex items-center justify-center flex-1 cursor-pointer duration-150 select-none"
         @click="onSelectTab(title)"
       >
         {{ title }}

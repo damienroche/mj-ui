@@ -14,3 +14,109 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+
+
+// Fade out
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.fadeOutUp {
+  animation-name: fadeOutUp;
+}
+
+// Fade In
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.notices {
+  @apply fixed flex top-0 bottom-0 left-0 right-0 p-2 overflow-hidden z-[1000] pointer-events-none;
+}
+
+.notices.is-top {
+  @apply flex-col;
+}
+
+.notices.is-bottom {
+  @apply flex-col-reverse;
+}
+
+.notices .notification.is-bottom, 
+.notices .notification.is-top, 
+.notices .snackbar.is-bottom, 
+.notices .snackbar.is-top, 
+.notices .toast.is-bottom, 
+.notices .toast.is-top {
+  @apply self-center;
+}
+
+.notices .toast {
+  @apply inline-flex my-2 text-center shadow-lg p-2 px-4 pointer-events-auto opacity-90 rounded-full;
+}

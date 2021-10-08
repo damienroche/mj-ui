@@ -13,7 +13,7 @@
       'h-[40px] text-xs px-4': size === 'normal',
       'h-[30px] text-xxs px-3': size === 'small'
     }"
-    class="select-none relative inline-flex items-center justify-center rounded font-bold animation duration-150 disabled_cursor-not-allowed disabled_opacity-75 leading-none"
+    class="select-none relative inline-flex items-center justify-center rounded font-bold duration-150 disabled_cursor-not-allowed disabled_opacity-75 leading-none"
     @click="$emit('click')"
   >
     <div class="flex-none whitespace-nowrap">

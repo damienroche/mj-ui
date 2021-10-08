@@ -2,7 +2,8 @@
   <div>
     <component
       :is="tag"
-      class="hover_bg-brand-light animation duration-150 p-5 rounded group dark_hover_bg-dark-300"
+      class="p-5 rounded group"
+      :class="{ 'dark_hover_bg-dark-300 hover_bg-brand-light duration-150': hoverable }"
     >
       <slot />
     </component>
@@ -22,6 +23,10 @@ export default {
       type: String,
       default: 'div',
       validator: value => ['div', 'a', 'li', 'router-link'].indexOf(value) >= 0
+    },
+    hoverable: {
+      type: Boolean,
+      default: false
     }
   }
 };

@@ -16,7 +16,7 @@ body {
 }
 
 
-// Fade out
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -25,8 +25,9 @@ body {
     opacity: 0;
   }
 }
+
 .fadeOut {
-  animation-name: fadeOut;
+  animation: fadeOut .2s;
 }
 
 @keyframes fadeOutDown {
@@ -39,7 +40,7 @@ body {
   }
 }
 .fadeOutDown {
-  animation-name: fadeOutDown;
+  animation: fadeOutDown .2s;
 }
 
 @keyframes fadeOutUp {
@@ -52,10 +53,9 @@ body {
   }
 }
 .fadeOutUp {
-  animation-name: fadeOutUp;
+  animation: fadeOutUp .2s;
 }
 
-// Fade In
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -65,7 +65,7 @@ body {
   }
 }
 .fadeIn {
-  animation-name: fadeIn;
+  animation: fadeIn .2s;
 }
 
 @keyframes fadeInDown {
@@ -79,7 +79,7 @@ body {
   }
 }
 .fadeInDown {
-  animation-name: fadeInDown;
+  animation: fadeInDown .2s;
 }
 
 @keyframes fadeInUp {
@@ -93,7 +93,7 @@ body {
   }
 }
 .fadeInUp {
-  animation-name: fadeInUp;
+  animation: fadeInUp .2s;
 }
 
 .notices {
@@ -118,7 +118,7 @@ body {
 }
 
 .notices .toast {
-  @apply inline-flex my-2 text-center shadow-lg py-4 px-8 pointer-events-auto opacity-90 rounded-full;
+  @apply inline-flex my-2 text-center shadow-lg py-3 px-8 pointer-events-auto opacity-90 rounded-full;
 }
 
 .mj-stepper .step {
@@ -160,7 +160,7 @@ body {
 }
 
 .mj-stepper .step.is-current .step-icon {
-  @apply border-navy;
+  @apply border-navy dark_border-gray-300;
 }
 
 .mj-stepper .step:last-child,

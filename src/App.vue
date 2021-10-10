@@ -9,6 +9,17 @@
     </mj-card>
 
     <mj-card class="my-4 p-4">
+      <mj-checkbox-group 
+        name="example"
+        v-model="check"
+        :options="[
+          { key: 'key_1', title: 'Option 1'},
+          { key: 'key_2', title: 'Option 2'},
+          { key: 'key_3', title: 'Option 3'}
+        ]"
+      />
+    </mj-card>
+    <mj-card class="my-4 p-4">
       <mj-stepper>
         <div slot="header" slot-scope="{ currentStep }" class="text-center my-4 h-8">
           <mj-text class="font-medium text-lg">{{ currentStep }}</mj-text>
@@ -242,6 +253,18 @@
           <mj-text class="my-3 block text-xs">Contenu tab 4</mj-text>
         </mj-tab>
       </mj-tab-wrapper>
+
+      <mj-tab-wrapper :rounded="false" type="navy">
+        <mj-tab title="Tab 1">
+          <mj-text class="my-3 block text-xs">Contenu tab 1</mj-text>
+        </mj-tab>
+        <mj-tab title="Tab 2">
+          <mj-text class="my-3 block text-xs">Contenu tab 2</mj-text>
+        </mj-tab>
+        <mj-tab title="Tab 3">
+          <mj-text class="my-3 block text-xs">Contenu tab 3</mj-text>
+        </mj-tab>
+      </mj-tab-wrapper>
     </mj-card>
 
     <mj-card class="p-4 my-4 w-[430px]">
@@ -419,7 +442,8 @@ export default {
       loading: false,
       isDark: false,
       mapStyle: 'roadmap',
-      indefiniteToast: null
+      indefiniteToast: null,
+      check: []
     };
   },
   mounted() {

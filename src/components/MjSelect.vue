@@ -49,7 +49,7 @@
             <slot name="tag" :option="option" :search="search" :remove="removeElement">
               <span
                 :key="index"
-                class="relative inline-block bg-navy dark_bg-dark py-2 pl-3 pr-8 text-xs font-semibold rounded text-white overflow-hidden max-w-full overflow-ellipsis select-none"
+                class="relative inline-block bg-navy dark_bg-dark py-2 pl-3 pr-8 text-xs font-semibold rounded text-white overflow-hidden max-w-full overflow-ellipsis select-none max-w-[200px] whitespace-nowrap"
                 :class="{ 'opacity-25': disabled }"
               >
                 <span v-text="getOptionLabel(option)"></span>

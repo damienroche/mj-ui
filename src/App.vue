@@ -464,7 +464,8 @@ export default {
       check: [],
       selectValue: null,
       selectValues: [],
-      selectOptions: ['list', 'of', 'options']
+      selectOptions: ['list', 'of', 'Quo sunt omnis accusamus alias odit quam, ex a ut non debitis, iste distinctio excepturi voluptas iusto aperiam placeat quas, quibusdam velit'
+      ]
     };
   },
   mounted() {

@@ -111,7 +111,10 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   variants: {
-    scrollbar: ['dark', 'rounded']
+    scrollbar: ['dark', 'rounded'],
+    extend: {
+      backgroundColor: ['checked']
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),

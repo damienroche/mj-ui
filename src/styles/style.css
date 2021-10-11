@@ -172,3 +172,21 @@ body {
 .mj-stepper .step:last-child::after {
   display: none;
 }
+
+[type=checkbox]:checked, 
+[type=radio]:checked {
+  border-color: transparent;
+  background-color: currentColor;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+[type="checkbox"]:checked {
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+}
+
+[type="radio"]:checked {
+  background-size: 70% 70%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16ZM18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z' fill='white'/%3E%3C/svg%3E");
+}

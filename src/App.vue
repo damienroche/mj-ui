@@ -9,7 +9,9 @@
     </mj-card>
 
     <mj-card class="my-4 p-4">
-      <mj-checkbox-group 
+      <mj-checkbox />
+      <mj-radio type="brand" />
+      <!-- <mj-checkbox-group
         name="example"
         v-model="check"
         :options="[
@@ -17,7 +19,7 @@
           { key: 'key_2', title: 'Option 2'},
           { key: 'key_3', title: 'Option 3'}
         ]"
-      />
+      /> -->
     </mj-card>
     <mj-card class="my-4 p-4">
       <mj-stepper>

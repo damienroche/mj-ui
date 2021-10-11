@@ -16,7 +16,7 @@ export default {
     type: {
       type: String,
       default: 'normal',
-      validator: value => ['normal', 'success', 'danger', 'bradn'].indexOf(value) >= 0
+      validator: value => ['normal', 'success', 'danger', 'brand'].indexOf(value) >= 0
     }
   }
 };

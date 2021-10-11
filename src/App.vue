@@ -8,9 +8,48 @@
       </div>
     </mj-card>
 
-    <mj-card class="my-4 p-4">
-      <mj-checkbox />
-      <mj-radio type="brand" />
+    <mj-card class="my-4 p-4 w-[430px]">
+      <h2 class="text-navy dark_text-white font-semibold mb-4">Formulaire</h2>
+      <form @submit.prevent="submitForm">
+        <!-- <fieldset disabled>  -->
+        <fieldset>
+          <legend>Fieldset</legend>
+          <mj-field class="my-2" label="Valeurs multiples">
+            <mj-select v-model="selectValues" :options="selectOptions" multiple></mj-select>
+          </mj-field>
+          <mj-field class="my-2" label="Valeur unique">
+            <mj-select v-model="selectValue" :options="selectOptions"></mj-select>
+          </mj-field>
+          <mj-field class="my-2" label="Chargement">
+            <mj-select v-model="selectValue" :options="selectOptions" loading></mj-select>
+          </mj-field>
+          <mj-field class="my-2" label="Désactivé">
+            <mj-select v-model="selectValues" :options="selectOptions" disabled multiple></mj-select>
+          </mj-field>
+
+          <mj-checkbox />
+          <mj-radio type="brand" />
+          <mj-field class="my-2" label="Prénom" required>
+            <mj-input type="text" />
+            <template #message>
+              Le prénom est obligatoire
+            </template>
+          </mj-field>
+          <mj-field class="my-2" label="Nom" required>
+            <mj-input type="text" placeholder="Nom de famile" />
+          </mj-field>
+          <mj-field class="my-2" label="Nom" required orientation="horizontal">
+            <mj-input type="text" placeholder="Nom de famile" />
+            <template #message>
+              Le nom est obligatoire
+            </template>
+          </mj-field>
+          <mj-field class="my-2" label="Commentaire">
+            <mj-input tag="textarea" class="resize-none" />
+          </mj-field>
+          <mj-button>Valider</mj-button>
+        </fieldset>
+      </form>
       <!-- <mj-checkbox-group
         name="example"
         v-model="check"
@@ -21,6 +60,8 @@
         ]"
       /> -->
     </mj-card>
+
+
     <mj-card class="my-4 p-4">
       <mj-stepper>
         <div slot="header" slot-scope="{ currentStep }" class="text-center my-4 h-8">
@@ -269,31 +310,6 @@
       </mj-tab-wrapper>
     </mj-card>
 
-    <mj-card class="p-4 my-4 w-[430px]">
-      <h2 class="text-navy dark_text-white font-semibold mb-4">Formulaire</h2>
-      <form @submit.prevent="submitForm">
-        <mj-field class="my-2" label="Prénom" required>
-          <mj-input type="text" />
-          <template #message>
-            Le prénom est obligatoire
-          </template>
-        </mj-field>
-        <mj-field class="my-2" label="Nom" required>
-          <mj-input type="text" placeholder="Nom de famile" />
-        </mj-field>
-        <mj-field class="my-2" label="Nom" required orientation="horizontal">
-          <mj-input type="text" placeholder="Nom de famile" />
-          <template #message>
-            Le nom est obligatoire
-          </template>
-        </mj-field>
-        <mj-field class="my-2" label="Commentaire">
-          <mj-input tag="textarea" class="resize-none" />
-        </mj-field>
-        <mj-button>Valider</mj-button>
-      </form>
-    </mj-card>
-
     <mj-card class="my-4 p-4">
       <h2 class="text-navy dark_text-white font-semibold mb-4">Overflow avec scrollbar custom</h2>
       <mj-fixed-height>
@@ -445,7 +461,10 @@ export default {
       isDark: false,
       mapStyle: 'roadmap',
       indefiniteToast: null,
-      check: []
+      check: [],
+      selectValue: null,
+      selectValues: [],
+      selectOptions: ['list', 'of', 'options']
     };
   },
   mounted() {

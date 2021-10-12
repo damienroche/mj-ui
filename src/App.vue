@@ -1,5 +1,7 @@
 <template>
   <div id="app" class="bg-gray-200 dark_bg-gray-900 p-4">
+    <mj-audio-player-inline src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+    <mj-audio-player-inline src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" title="Commentaire audio :" />
     <mj-card class="my-4 p-4 sticky top-[20px] z-10 w-[200px] ml-auto">
       <h2 class="text-navy dark_text-white font-semibold mb-4">Dark/Light Mode</h2>
       <div class="flex gap-4">

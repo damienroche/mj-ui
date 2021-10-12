@@ -1,8 +1,11 @@
 <template>
   <div
     ref="bar"
-    class="w-full bg-gray-100 dark_bg-dark-200 rounded-full relative"
-    :class="{ 'cursor-pointer': interactive }"
+    class="w-full rounded-full relative"
+    :class="{
+      'cursor-pointer': interactive,
+      'bg-gray-100 dark_bg-dark-200': stripped
+    }"
     :style="{ height }"
     @click.stop="onClick"
   >

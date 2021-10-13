@@ -7,10 +7,6 @@
         <mj-text tag="router-link" :to="{ name: 'Programmatic' }" class="text-xs font-bold">Programmatic</mj-text>
         <mj-text tag="router-link" :to="{ name: 'Cards' }" class="text-xs font-bold">Boites MJ-FLEET</mj-text>
       </nav>
-      <div class="flex gap-4">
-        <mj-button :type="isDark ? 'primary' : 'secondary'" @click="setTheme('dark')">Dark</mj-button>
-        <mj-button :type="!isDark ? 'primary' : 'secondary'" @click="setTheme('light')">Light</mj-button>
-      </div>
     </mj-card>
     <router-view />
   </div>

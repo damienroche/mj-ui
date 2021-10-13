@@ -1,6 +1,10 @@
 <template>
   <div>
     <mj-card class="my-4 p-4">
+      <mj-audio-player-inline src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+      <mj-audio-player-inline src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" title="Commentaire audio :" />
+    </mj-card>
+    <mj-card class="my-4 p-4">
       <mj-stepper>
         <div slot="header" slot-scope="{ currentStep }" class="text-center my-4 h-8">
           <mj-text class="font-medium text-lg">{{ currentStep }}</mj-text>

@@ -24,7 +24,6 @@
       </div>
     </slot>
     <slot name="clear" :search="search"></slot>
-    <!-- class="multiselect__tags" -->
     <div
       ref="tags"
       class="px-2 flex-1 w-full bg-white dark_bg-dark-100 min-h-[50px] text-xs flex items-center flex-wrap border border-ternary-light dark_border-dark-200"
@@ -219,8 +218,13 @@
 <script>
 import SelectMixin from './../mixins/SelectMixin';
 import PointerMixin from './../mixins/PointerMixin';
+import MjLoadingIcon from './icons/MjLoadingIcon.vue';
+
 export default {
   name: 'MjSelect',
+  components: {
+    'mj-loading-icon': MjLoadingIcon
+  },
   mixins: [SelectMixin, PointerMixin],
   props: {
     /**

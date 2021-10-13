@@ -9,7 +9,8 @@
       'select-none': !select,
       'hover_text-gray-600 dark_hover_text-gray-200': type === 'gray-500' && hoverable,
       'text-success': type === 'success',
-      'animation duration-150': hoverable
+      'animation duration-150': hoverable,
+      'group-hover_text-brand duration-150': groupHover === 'brand'
     }"
   >
     <slot />
@@ -37,6 +38,11 @@ export default {
     hoverable: {
       type: Boolean,
       default: false
+    },
+    groupHover: {
+      type: String,
+      default: null,
+      validator: value => ['brand'].indexOf(value) >= 0
     }
   }
 };

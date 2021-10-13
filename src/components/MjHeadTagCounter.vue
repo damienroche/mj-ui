@@ -1,5 +1,5 @@
 <template>
-  <mj-head-tag>
+  <mj-head-tag :type="count > 0 ? 'normal' : 'gray-500'">
     {{ count }}
   </mj-head-tag>
 </template>

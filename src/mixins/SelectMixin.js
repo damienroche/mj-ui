@@ -98,7 +98,7 @@ export default {
     /**
      * Array of available options: Objects, Strings or Integers.
      * If array of objects, visible label will default to option.label.
-     * If `labal` prop is passed, label will equal option['label']
+     * If `label` prop is passed, label will equal option['label']
      * @type {Array}
      */
     options: {

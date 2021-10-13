@@ -9,7 +9,9 @@
   "scripts": {
     "serve": "TAILWIND_MODE=watch vue-cli-service serve",
     "build": "NODE_ENV=production TAILWIND_MODE=watch vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.12.5",
@@ -21,8 +23,14 @@
     "vue-tailwind": "^2.5.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@storybook/addon-actions": "^6.3.10",
+    "@storybook/addon-essentials": "^6.3.10",
+    "@storybook/addon-links": "^6.3.10",
+    "@storybook/vue": "^6.3.10",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",
+    "@vue/babel-preset-app": "^4.5.13",
     "@vue/cli-plugin-babel": "^4.5.9",
     "@vue/cli-plugin-eslint": "^4.5.9",
     "@vue/cli-plugin-pwa": "^4.5.9",
@@ -31,15 +39,18 @@
     "@vue/composition-api": "^1.0.0-beta.20",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.14",
     "eslint-plugin-vue": "^7.2.0",
     "postcss": "^8.2.10",
     "postcss-import": "^12.0",
+    "storybook-dark-mode": "^1.0.8",
     "tailwind-scrollbar": "^1.3.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
     "unplugin-vue-components": "^0.15.6",
+    "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.12"
   },
   "engines": {

@@ -7,7 +7,7 @@ process.env.VUE_APP_VERSION = config.version;
 const { emerald } = require('tailwindcss/colors');
 
 module.exports = {
-  outputDir: 'fleet',
+  outputDir: 'docs',
   publicPath: '/',
   pwa: {
     themeColor: emerald['600'],

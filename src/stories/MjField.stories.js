@@ -28,7 +28,7 @@ const Template = (args, { argTypes }) => ({
   template: '<mj-field v-bind="$props"><mj-input /> <template #message>Custom message</template></mj-field>',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: 'Nom du champ',
 };

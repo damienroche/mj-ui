@@ -8,7 +8,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { MjAudioPlayerInline },
-  template: '<mj-audio-player-inline v-bind="$props"> {{ label }} </mj-audio-player-inline>',
+  template: '<mj-audio-player-inline v-bind="$props" />',
 });
 
 export const Default = Template.bind({});

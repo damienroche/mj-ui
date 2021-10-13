@@ -150,6 +150,7 @@ export default {
       }
     },
     cleanup() {
+      clearInterval(this.seekId);
       if (this.howl) {
         this.stop();
       }

@@ -11,7 +11,7 @@
     "build": "NODE_ENV=production TAILWIND_MODE=watch vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.12.5",
@@ -28,6 +28,7 @@
     "@storybook/addon-actions": "^6.3.10",
     "@storybook/addon-essentials": "^6.3.10",
     "@storybook/addon-links": "^6.3.10",
+    "@storybook/storybook-deployer": "^2.8.10",
     "@storybook/vue": "^6.3.10",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",

@@ -6,6 +6,7 @@
         <mj-text tag="router-link" :to="{ name: 'Utilities' }" class="text-xs font-bold">Utilitaires</mj-text>
         <mj-text tag="router-link" :to="{ name: 'Programmatic' }" class="text-xs font-bold">Programmatic</mj-text>
         <mj-text tag="router-link" :to="{ name: 'Cards' }" class="text-xs font-bold">Boites MJ-FLEET</mj-text>
+        <mj-user-avatar class="w-11 h-11" />
       </nav>
     </mj-card>
     <router-view />

@@ -24,9 +24,9 @@
               <mj-text class="font-semibold text-xs line-clamp-1" group-hover="brand"> {{ file.fileName || 'N.C.' }} </mj-text>
               <mj-text type="ternary" class="text-xxxxs"> {{ file.updatedAt }}</mj-text>
             </div>
-            <mj-text tag="a" class="w-6 h-6 flex items-center justify-center" :href="file.fileUrl" target="_blank" group-hover="brand">
-              <svg width="100%" height="100%" viewBox="0 0 512 512"><path d="M256 464c114.87 0 208-93.13 208-208S370.87 48 256 48S48 141.13 48 256s93.13 208 208 208zm-91.36-212.65a16 16 0 0 1 22.63-.09L240 303.58V170a16 16 0 0 1 32 0v133.58l52.73-52.32A16 16 0 1 1 347.27 274l-80 79.39a16 16 0 0 1-22.54 0l-80-79.39a16 16 0 0 1-.09-22.65z" fill="currentColor"></path></svg>
-            </mj-text>
+            <a class="w-6 h-6 flex items-center justify-center hover_text-navy-dark" :href="file.fileUrl" target="_blank">
+              <mj-download-icon />
+            </a>
             <mj-circle-base class="h-6 w-6">
               <mj-text tag="a" type="gray-500" class="w-3 h-3" group-hover="brand">
                 <mj-delete-icon />

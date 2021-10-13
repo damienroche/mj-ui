@@ -181,11 +181,11 @@
         </mj-text>
       </div>
       <div class="my-4">
-        <mj-inline-true-false class="my-px" title="Informer le client de la planification du contrat" :value="true" />
-        <mj-inline-true-false class="my-px" title="Lorsque toutes les interventions seront planifiées" :value="true" />
-        <mj-inline-true-false class="my-px" title="Informer le client de la fin du contrat" :value="false" />
-        <mj-inline-true-false class="my-px" title="Lorsque toutes les interventions seront terminées" :value="false" />
-        <mj-inline-true-false class="my-px" title="Définir une date personnalisée" :value="true" />
+        <mj-true-false-inline class="my-px" title="Informer le client de la planification du contrat" :value="true" />
+        <mj-true-false-inline class="my-px" title="Lorsque toutes les interventions seront planifiées" :value="true" />
+        <mj-true-false-inline class="my-px" title="Informer le client de la fin du contrat" :value="false" />
+        <mj-true-false-inline class="my-px" title="Lorsque toutes les interventions seront terminées" :value="false" />
+        <mj-true-false-inline class="my-px" title="Définir une date personnalisée" :value="true" />
         <mj-field class="mt-3" label="Alert SMS + Email :">
           <div class="flex flex-wrap gap-2">
             <mj-tag>antoine.delorme@gmail.com</mj-tag>

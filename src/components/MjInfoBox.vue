@@ -1,8 +1,8 @@
 <template>
   <div class="rounded p-3 flex items-center gap-3" :class="{
-    'bg-brand-light text-brand dark_bg-brand-dark dark_text-white': color === 'brand',
-    'bg-danger-light text-danger dark_bg-danger-dark dark_text-white': color === 'danger',
-    'bg-success-light text-success dark_bg-success-dark dark_text-white': color === 'success'
+    'bg-brand-light text-brand dark_bg-brand-dark dark_text-white': type === 'brand',
+    'bg-danger-light text-danger dark_bg-danger-dark dark_text-white': type === 'danger',
+    'bg-success-light text-success dark_bg-success-dark dark_text-white': type === 'success'
   }"
   >
     <div
@@ -21,10 +21,20 @@
 export default {
   name: 'MjInfoBox',
   props: {
-    color: {
+    /**
+     * box type, availables values are `'brand', 'danger', 'success'`
+     * @default 'brand'
+     * @type {String}
+     */
+    type: {
       type: String,
       default: 'brand'
     },
+    /**
+     * box icon, available value are `'info''`
+     * @default 'info'
+     * @type {String}
+     */
     icon: {
       type: String,
       default: 'info'

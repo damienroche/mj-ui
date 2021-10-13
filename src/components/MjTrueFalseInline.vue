@@ -7,17 +7,29 @@
 
 <script>
 import MjTrueFalse from './MjTrueFalse.vue';
+import MjText from './MjText.vue';
 
 export default {
-  name: 'MjInlineTrueFalse',
+  name: 'MjTrueFalseInline',
   components: {
-    MjTrueFalse
+    'mj-true-false': MjTrueFalse,
+    'mj-text': MjText
   },
   props: {
+    /**
+     * button value
+     * @default true
+     * @type {Boolean}
+    */
     value: {
       type: Boolean,
       default: true
     },
+    /**
+     * title
+     * @default ''
+     * @type {String}
+    */
     title: {
       type: String,
       default: ''

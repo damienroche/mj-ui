@@ -59,7 +59,7 @@ export default {
     },
   },
   created() {
-    this.stepTitles = this.$slots.default.map(step => get(step, 'componentOptions.propsData.title'));
+    this.stepTitles = this.$slots.default.filter(step => get(step, 'componentOptions.propsData.title')).map(step => get(step, 'componentOptions.propsData.title'));
     this.disabledSteps = this.$slots.default
       .filter(step => get(step, 'componentOptions.propsData.disabled') === '')
       .map(step => get(step, 'componentOptions.propsData.title'));

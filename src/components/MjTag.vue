@@ -19,11 +19,21 @@
 export default {
   name: 'MjTag',
   props: {
+    /**
+     * Tag type, accepted values are `['hollow', 'secondary', 'brand', 'ternary']`
+     * @default 'hollow'
+     * @type {String}
+    */
     type: {
       type: String,
       default: 'hollow',
-      validator: value => ['hollow', 'secondary', 'brand', 'ternary'].indexOf(value) >= 0
+      validator: value => ['hollow', 'ternary'].indexOf(value) >= 0
     },
+    /**
+     * If true, the tag will be interactive, a delete button will be displayed
+     * @default false
+     * @type {Boolean}
+    */
     deletable: {
       type: Boolean,
       default: false

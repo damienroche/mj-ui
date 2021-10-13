@@ -1,8 +1,8 @@
-import MjButton from './../components/MjButton.vue';
+import MjNextButton from './../components/MjNextButton.vue';
 
 export default {
-  title: 'Buttons/MjButton',
-  component: MjButton,
+  title: 'Buttons/MjNextButton',
+  component: MjNextButton,
   argTypes: {
     type: {
       control: { type: 'select' },
@@ -24,12 +24,11 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { MjButton },
-  template: '<mj-button v-bind="$props"> {{ label }} </mj-button>',
+  components: { MjNextButton },
+  template: '<mj-next-button v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-  type: 'primary',
-  label: 'Ajouter',
+export const Default = Template.bind({});
+Default.args = {
+  title: 'Suivant'
 };

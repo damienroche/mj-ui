@@ -25,7 +25,7 @@
           </div>
         </mj-step>
         <div slot="footer" slot-scope="{ currentIndex, goNext, goPrevious, count }" class="flex gap-4">
-          <mj-button v-if="currentIndex > 0" type="secondary" @click="goPrevious" >Étape précédente</mj-button>
+          <mj-button v-if="currentIndex > 0" type="secondary" @click="goPrevious">Étape précédente</mj-button>
           <mj-button @click="goNext">
             <span v-if="currentIndex < count - 1">Suivant</span>
             <span v-else>Valider</span>
@@ -80,7 +80,7 @@
         <mj-add-button title="Importer un document réglementaire" />
         <mj-add-button title="Ajouter" />
         <mj-add-button title="Importer une photo de profil" />
-        <mj-save-button title="Mettre à jour" :loading="loading" @click="loading = !loading" />
+        <mj-process-button title="Mettre à jour" :loading="loading" @click="loading = !loading" />
       </div>
       <div class="flex flex-wrap gap-4 my-8">
         <mj-tag deletable>antoine.delorme@gmail.com</mj-tag>
@@ -130,10 +130,10 @@
       <mj-info-box class="my-2">
         Propreté du chantier
       </mj-info-box>
-      <mj-info-box class="my-2" color="danger">
+      <mj-info-box class="my-2" type="danger">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi aliquid delectus ullam culpa laudantium sequi molestias rerum?
       </mj-info-box>
-      <mj-info-box class="my-2" color="success">
+      <mj-info-box class="my-2" type="success">
         Bravo
       </mj-info-box>
     </mj-card>

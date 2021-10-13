@@ -1,5 +1,10 @@
 
 import '../src/styles/style.css';
+import { addParameters } from '@storybook/client-api';
+
+addParameters({
+  viewMode: 'docs',
+});
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,5 +18,5 @@ export const parameters = {
     darkClass: 'dark',
     lightClass: 'light',
     stylePreview: true
-  },
+  }
 };

@@ -36,23 +36,50 @@
 export default {
   name: 'MjProgressBar',
   props: {
+    /**
+     * Progress bar height in pixels
+     * @default '10px'
+     * @type {String}
+    */
     height: {
       type: String,
       default: '10px'
     },
+    /**
+     * Progress bar style, accepted values are `['brand', 'navy', 'success', 'danger']`
+     * @default 'brand'
+     * @type {String}
+    */
     type: {
       type: String,
-      default: 'brand'
+      default: 'brand',
+      validator: value => ['brand', 'navy', 'success', 'danger'].indexOf(value) >= 0
     },
+    /**
+     * Progress value, float between 0 and 1
+     * @default 0
+     * @type {Float}
+    */
     value: {
       type: Number,
       default: 0,
       validator: value => value >= 0 && value <= 1
     },
+    /**
+     * Add stripped background to progress bar
+     * @default false
+     * @type {Boolean}
+    */
     stripped: {
       type: Boolean,
       default: false
     },
+    /**
+     * In interactive mode, click on progress bar emit an event with the percentage of progression
+     * For example, we use it to navigate in a audio playback
+     * @default false
+     * @type {Boolean}
+    */
     interactive: {
       type: Boolean,
       default: false

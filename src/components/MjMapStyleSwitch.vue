@@ -23,10 +23,16 @@
 export default {
   name: 'MjMapStyleSwitch',
   props: {
+    /**
+     * Map style selected, accepted values are `['roadmap', satellite']`
+     * @default 'roadmap'
+     * @type {String}
+    */
     value: {
       type: String,
       default: 'roadmap',
-      required: true
+      required: true,
+      validator: value => ['roadmap', 'satellite'].indexOf(value) >= 0
     }
   },
   methods: {

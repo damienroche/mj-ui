@@ -1,8 +1,8 @@
-import MjButton from './../components/MjButton.vue';
+import MjProcessButton from './../components/MjProcessButton.vue';
 
 export default {
-  title: 'Buttons/MjButton',
-  component: MjButton,
+  title: 'Buttons/MjProcessButton',
+  component: MjProcessButton,
   argTypes: {
     type: {
       control: { type: 'select' },
@@ -18,18 +18,20 @@ export default {
     },
     disabled: {
       control: { type: 'boolean' }
+    },
+    loading: {
+      control: { type: 'boolean' }
     }
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { MjButton },
-  template: '<mj-button v-bind="$props"> {{ label }} </mj-button>',
+  components: { MjProcessButton },
+  template: '<mj-process-button v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-  type: 'primary',
-  label: 'Ajouter',
+export const Default = Template.bind({});
+Default.args = {
+  title: 'Sauvegarder'
 };

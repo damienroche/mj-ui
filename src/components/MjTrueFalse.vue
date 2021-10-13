@@ -14,10 +14,20 @@
 export default {
   name: 'MjTrueFalse',
   props: {
+    /**
+     * button position
+     * @default false
+     * @type {Boolean}
+    */
     value: {
       type: Boolean,
       default: false
     },
+    /**
+     * button tag type, accepted values are `'span', 'div', 'a', 'router-link'`
+     * @default 'div'
+     * @type {String}
+    */
     tag: {
       type: String,
       default: 'div',

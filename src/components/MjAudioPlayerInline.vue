@@ -31,14 +31,28 @@
 import { Howl } from 'howler';
 import { clamp } from './../utils/math';
 import { secondToTime } from './../utils/time';
+import MjProgressBar from './MjProgressBar.vue';
 
 export default {
   name: 'MjAudioPlayerInline',
+  components: {
+    'mj-progress-bar': MjProgressBar
+  },
   props: {
+    /**
+     * source of the audio file
+     * @default null
+     * @type {String}
+     */
     src: {
       type: String,
       required: true
     },
+    /**
+     * title of the audio file
+     * @default ''
+     * @type {String}
+     */
     title: {
       type: String,
       default: ''
@@ -84,26 +98,29 @@ export default {
     this.howl = new Howl({
       src: [this.src]
     });
-    this.howl.on('play', () => {
-      this.playing = true;
-    });
-    this.howl.on('pause', () => {
-      this.playing = false;
-    });
-    this.howl.on('stop', () => {
-      this.playing = false;
-    });
-    this.howl.on('end', () => {
-      this.playing = false;
-    });
-    this.howl.on('load', () => {
-      this.duration = this.howl.duration();
-    });
-    this.howl.on('seek', () => {
-      this.seek = this.howl.seek();
-    });
+    this.howl.on('play', this.setPlaying);
+    this.howl.on('pause', this.unsetPlaying);
+    this.howl.on('stop', this.unsetPlaying);
+    this.howl.on('end', this.unsetPlaying);
+    this.howl.on('load', this.onHowlLoad);
+    this.howl.on('seek', this.onHowlSeek);
+  },
+  beforeDestroy() {
+    this.cleanup();
   },
   methods: {
+    setPlaying() {
+      this.playing = true;
+    },
+    unsetPlaying() {
+      this.playing = false;
+    },
+    onHowlLoad() {
+      this.duration = this.howl.duration();
+    },
+    onHowlSeek() {
+      this.seek = this.howl.seek();
+    },
     togglePlay() {
       if (!this.playing) {
         this.howl.play();
@@ -132,6 +149,20 @@ export default {
         this.howl.pause();
       }
     },
+    cleanup() {
+      if (this.howl) {
+        this.stop();
+      }
+      this.howl.off('play', this.setPlaying);
+      this.howl.off('pause', this.unsetPlaying);
+      this.howl.off('stop', this.unsetPlaying);
+      this.howl.off('end', this.unsetPlaying);
+      this.howl.off('load', this.onHowlLoad);
+      this.howl.off('seek', this.onHowlSeek);
+      this.howl = null;
+      this.seek = 0;
+      this.duration = 0;
+    }
   }
 };
 </script>

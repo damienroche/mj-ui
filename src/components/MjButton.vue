@@ -27,15 +27,30 @@ export default {
   name: 'MjButton',
   props: {
     tag: {
+      /**
+       * type of html tag, accepted values are `'button', 'a', 'input', 'router-link'`
+       * @default 'button'
+       * @type {String}
+      */
       type: String,
       default: 'button',
       validator: value => ['button', 'a', 'input', 'router-link'].indexOf(value) >= 0
     },
+    /**
+     * button appareance, accepted values are `'primary', 'secondary', 'transparent', 'brand', 'success', 'danger'`
+     * @default 'primary'
+     * @type {String}
+    */
     type: {
       type: String,
       default: 'primary',
       validator: value => ['primary', 'secondary', 'transparent', 'brand', 'success', 'danger'].indexOf(value) >= 0
     },
+    /**
+     * button size, accepted values are `'normal', 'small'`
+     * @default 'primary'
+     * @type {String}
+    */
     size: {
       type: String,
       default: 'normal',

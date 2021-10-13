@@ -45,14 +45,30 @@ export default {
     };
   },
   props: {
+    /**
+     * Tabs size `'small'`
+     * @default 'small'
+     * @type {String}
+    */
     size: {
       type: String,
-      default: 'small'
+      default: 'small',
+      validator: value => ['small'].indexOf(value) >= 0
     },
+    /**
+     * Tab can be small rounded or large rounded, use true for large rounded
+     * @default true
+     * @type {Boolean}
+    */
     rounded: {
       type: Boolean,
       default: true
     },
+    /**
+     * Tabs style, accepted values are `'brand', 'navy'`
+     * @default 'brand'
+     * @type {String}
+    */
     type: {
       type: String,
       default: 'brand',
@@ -72,7 +88,7 @@ export default {
     }
   },
   created() {
-    this.tabTitles = this.$slots.default.map(tab => get(tab, 'componentOptions.propsData.title'));
+    this.tabTitles = this.$slots.default.filter(tab => get(tab, 'componentOptions.propsData.title')).map(tab => get(tab, 'componentOptions.propsData.title'));
     this.disabledTabs = this.$slots.default
       .filter(tab => get(tab, 'componentOptions.propsData.disabled') === '')
       .map(tab => get(tab, 'componentOptions.propsData.title'));

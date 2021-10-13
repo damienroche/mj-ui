@@ -5,6 +5,13 @@ import MjText from './../components/MjText.vue';
 export default {
   component: MjTabWrapper,
   title: 'Containers/MjTabWrapper',
+  parameters: {
+    docs: {
+      description: {
+        component: 'MjTabWrapper must be used with MjTab components inside (see "show code" as an example)',
+      },
+    },
+  },
   argTypes: {
     type: {
       control: { type: 'select' },
@@ -17,7 +24,7 @@ export default {
   },
 };
 
-export const Tabs = (args, { argTypes }) => ({
+export const Default = (args, { argTypes }) => ({
   components: { MjTabWrapper, MjTab, MjText },
   props: Object.keys(argTypes),
   template: `

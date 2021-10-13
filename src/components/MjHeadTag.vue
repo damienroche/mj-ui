@@ -14,6 +14,11 @@
 export default {
   name: 'MjHeadTag',
   props: {
+    /**
+     * head tag type, availables values are `['normal', 'gray-500']`
+     * @default 'normal'
+     * @type {String}
+     */
     type: {
       type: String,
       default: 'normal',

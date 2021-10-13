@@ -1,10 +1,6 @@
 
 import '../src/styles/style.css';
-import { addParameters } from '@storybook/client-api';
-
-addParameters({
-  viewMode: 'docs',
-});
+import { themes } from '@storybook/theming'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -18,5 +14,11 @@ export const parameters = {
     darkClass: 'dark',
     lightClass: 'light',
     stylePreview: true
+  },
+  docs: {
+    get theme() {
+      let isDarkMode = parent.document.body.classList.contains('dark');
+      return isDarkMode ? themes.dark : themes.light;
+    }
   }
 };

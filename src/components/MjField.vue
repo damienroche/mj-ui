@@ -25,17 +25,37 @@
 </template>
 
 <script>
+import MjText from './MjText.vue';
+
 export default {
   name: 'MjField',
+  components: {
+    'mj-text': MjText
+  },
   props: {
+    /**
+     * Field label `required`
+     * @default null
+     * @type {String}
+     */
     label: {
       type: String,
       required: true
     },
+    /**
+     * Display '*' at the end of label
+     * @default false
+     * @type {Boolean}
+     */
     required: {
       type: Boolean,
       default: false
     },
+    /**
+     * Field orientation, availables values are `['vertical', 'horizontal']`
+     * @default 'vertical'
+     * @type {String}
+    */
     orientation: {
       type: String,
       default: 'vertical',

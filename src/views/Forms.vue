@@ -42,15 +42,6 @@
           <mj-button>Valider</mj-button>
         </fieldset>
       </form>
-      <!-- <mj-checkbox-group
-        name="example"
-        v-model="check"
-        :options="[
-          { key: 'key_1', title: 'Option 1'},
-          { key: 'key_2', title: 'Option 2'},
-          { key: 'key_3', title: 'Option 3'}
-        ]"
-      /> -->
     </mj-card>
   </div>
 </template>

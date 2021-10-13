@@ -12,6 +12,11 @@
 export default {
   name: 'MjCardFooter',
   props: {
+    /**
+     * Remove default padding
+     * @default false
+     * @type {Boolean}
+     */
     noPadding: {
       type: Boolean,
       default: false

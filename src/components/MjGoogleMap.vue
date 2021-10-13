@@ -22,6 +22,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { merge, omitBy, isNil } from 'lodash';
 import { Loader } from '@googlemaps/js-api-loader';
 
+import MjMapZoom from './MjMapZoom.vue';
+import MjMapStyleSwitch from './MjMapStyleSwitch.vue';
+
 const uuid = Vue.observable({ value: uuidv4() });
 const DEFAULT_MAP_OPTIONS = {
   container: `map-${uuid.value}`,
@@ -37,6 +40,10 @@ const mapIsReady = Vue.observable({ value: false });
 
 export default {
   name: 'MjGoogleMap',
+  components: {
+    'mj-map-zoom': MjMapZoom,
+    'mj-map-style-switch': MjMapStyleSwitch
+  },
   provide() {
     return {
       map,
@@ -45,18 +52,38 @@ export default {
     };
   },
   props: {
+    /**
+     * Map Height in pixel
+     * @default '450px'
+     * @type {String}
+     */
     height: {
       type: String,
       default: '450px'
     },
+    /**
+     * google map options object
+     * @default { zoom: 14, disableDefaultUI: true }
+     * @type {Object}
+     */
     mapOptions: {
       type: Object,
       default: () => ({ zoom: 14, disableDefaultUI: true })
     },
+    /**
+     * enable/disable custom controls
+     * @default true
+     * @type {Boolean}
+     */
     showControls: {
       type: Boolean,
       default: true
     },
+    /**
+     * center of view : object with latitude and longitude keys `{ latitude: 47, longitude: 4.5 }`
+     * @default null
+     * @type {Object}
+     */
     center: {
       type: Object,
       default: null

@@ -14,10 +14,15 @@
 export default {
   name: 'MjRadio',
   props: {
+    /**
+     * radio appareance, accepted values are `['normal', 'brand']`
+     * @default 'normal'
+     * @type {String}
+    */
     type: {
       type: String,
       default: 'normal',
-      validator: value => ['normal', 'success', 'danger', 'brand'].indexOf(value) >= 0
+      validator: value => ['normal', 'brand'].indexOf(value) >= 0
     }
   }
 };

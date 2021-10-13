@@ -14,10 +14,20 @@
 export default {
   name: 'MjFlexCentered',
   props: {
+    /**
+     * Container Height in pixel
+     * @default '60px'
+     * @type {String}
+     */
     height: {
       type: String,
       default: '60px'
     },
+    /**
+     * Text center in container
+     * @default false
+     * @type {Boolean}
+     */
     textCenter: {
       type: Boolean,
       default: false

@@ -6,7 +6,7 @@ export default {
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['hollow', 'ternary'],
+      options: ['hollow', 'secondary'],
     },
     deletable: {
       control: { type: 'boolean' }

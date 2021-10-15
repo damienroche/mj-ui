@@ -26,7 +26,7 @@
     <slot name="clear" :search="search"></slot>
     <div
       ref="tags"
-      class="px-2 flex-1 w-full bg-white dark_bg-dark-100 min-h-[50px] text-xs flex items-center flex-wrap border border-ternary-light dark_border-dark-200"
+      class="px-2 flex-1 w-full bg-white dark_bg-dark-100 min-h-[50px] text-xs flex items-center flex-wrap border border-secondary-light dark_border-dark-200"
       :class="{
         'rounded-t': isOpen && !isAbove,
         'rounded-b': isOpen && isAbove,
@@ -48,13 +48,13 @@
             <slot name="tag" :option="option" :search="search" :remove="removeElement">
               <span
                 :key="index"
-                class="relative inline-block bg-navy dark_bg-dark py-2 pl-3 pr-8 text-xs font-semibold rounded text-white overflow-hidden max-w-full overflow-ellipsis select-none max-w-[200px] whitespace-nowrap"
+                class="relative inline-block bg-primary dark_bg-dark py-2 pl-3 pr-8 text-xs font-semibold rounded text-white overflow-hidden max-w-full overflow-ellipsis select-none max-w-[200px] whitespace-nowrap"
                 :class="{ 'opacity-25': disabled }"
               >
                 <span v-text="getOptionLabel(option)"></span>
                 <i
                   tabindex="1"
-                  class="bg-navy-dark dark_bg-dark-200 hover_bg-dark dark_hover_bg-dark inline-flex items-center justify-center cursor-pointer absolute top-0 bottom-0 right-0 font-bold duration-150 px-2"
+                  class="bg-primary-dark dark_bg-dark-200 hover_bg-dark dark_hover_bg-dark inline-flex items-center justify-center cursor-pointer absolute top-0 bottom-0 right-0 font-bold duration-150 px-2"
                   @keypress.enter.prevent="removeElement(option)"
                   @mousedown.prevent="removeElement(option)"
                 >
@@ -129,7 +129,7 @@
       <div
         v-show="isOpen"
         ref="list"
-        class="absolute block bg-white dark_bg-dark max-h-[240px] overflow-auto z-10 border border-ternary-light dark_border-dark-200 min-w-full"
+        class="absolute block bg-white dark_bg-dark max-h-[240px] overflow-auto z-10 border border-secondary-light dark_border-dark-200 min-w-full"
         :class="{
           'rounded-b border-t-0': !isAbove,
           'rounded-t bottom-full': isAbove
@@ -167,7 +167,7 @@
               <span
                 v-if="!(option && (option.$isLabel || option.$isDisabled))"
                 class="flex min-h-[50px] leading-none items-center px-4"
-                :class="{ 'bg-navy text-white' : isOptionHighlighted(index) }"
+                :class="{ 'bg-primary text-white' : isOptionHighlighted(index) }"
                 :data-select="option && option.isTag ? tagPlaceholder : selectLabelText"
                 :data-selected="selectedLabelText"
                 :data-deselect="deselectLabelText"

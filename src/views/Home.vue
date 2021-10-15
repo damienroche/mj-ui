@@ -95,7 +95,7 @@
     </mj-card>
 
     <mj-card class="p-4 my-4">
-      <h2 class="text-navy dark_text-white font-semibold mb-4">Niveau de gris</h2>
+      <h2 class="text-primary dark_text-white font-semibold mb-4">Niveau de gris</h2>
       <div class="grid grid-cols-8">
         <div class="h-32 bg-gray-100"></div>
         <div class="h-32 bg-gray-200"></div>
@@ -110,15 +110,15 @@
     </mj-card>
 
     <mj-card class="p-4 my-4">
-      <h2 class="text-navy dark_text-white font-semibold mb-4">Couleur ternaire</h2>
+      <h2 class="text-primary dark_text-white font-semibold mb-4">Couleur ternaire</h2>
       <div class="grid grid-cols-8">
-        <div class="h-32 bg-ternary-light"></div>
-        <div class="h-32 bg-ternary"></div>
+        <div class="h-32 bg-secondary-light"></div>
+        <div class="h-32 bg-secondary"></div>
       </div>
     </mj-card>
 
     <mj-card class="p-4 my-4">
-      <h2 class="text-navy dark_text-white font-semibold mb-4">Élements cartes</h2>
+      <h2 class="text-primary dark_text-white font-semibold mb-4">Élements cartes</h2>
       <div class="flex flex-wrap gap-4 items-start">
         <mj-map-zoom :disabled="['in']" />
         <mj-map-style-switch v-model="mapStyle" />
@@ -126,7 +126,7 @@
     </mj-card>
 
     <mj-card class="p-4 my-4">
-      <h2 class="text-navy dark_text-white font-semibold mb-4">Boite infos</h2>
+      <h2 class="text-primary dark_text-white font-semibold mb-4">Boite infos</h2>
       <mj-info-box class="my-2">
         Propreté du chantier
       </mj-info-box>

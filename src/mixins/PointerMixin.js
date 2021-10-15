@@ -43,7 +43,7 @@ export default {
     optionHighlight(index, option) {
       return {
         'bg-gray-400': index === this.pointer && this.showPointer,
-        'bg-navy dark_bg-white text-white dark_bg-navy': this.isSelected(option)
+        'bg-primary dark_bg-white text-white dark_bg-primary': this.isSelected(option)
       };
     },
     isOptionHighlighted(index) {

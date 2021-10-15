@@ -4,12 +4,12 @@
     :style="styles"
     v-bind="$attrs"
     :class="{
-      'bg-navy text-white hover_bg-navy-dark focus_bg-navy': type === 'primary',
-      'bg-gray-200 text-ternary hover_bg-gray-400 border border-gray-400 dark_bg-dark-200 dark_text-white dark_border-transparent dark_hover_bg-dark-300': type === 'secondary',
+      'bg-primary text-white hover_bg-primary-dark focus_bg-primary': type === 'primary',
+      'bg-gray-200 text-secondary hover_bg-gray-400 border border-gray-400 dark_bg-dark-200 dark_text-white dark_border-transparent dark_hover_bg-dark-300': type === 'secondary',
       'bg-brand text-white hover_bg-brand-dark': type === 'brand',
       'bg-success text-white hover_bg-success-dark': type === 'success',
       'bg-danger text-white hover_bg-danger-dark': type === 'danger',
-      'bg-transparent text-ternary hover_text-ternary-dark': type === 'transparent',
+      'bg-transparent text-secondary hover_text-secondary-dark': type === 'transparent',
       'h-[40px] text-xs px-4': size === 'normal',
       'h-[30px] text-xxs px-3': size === 'small'
     }"

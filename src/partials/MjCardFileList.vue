@@ -22,9 +22,9 @@
             </mj-text>
             <div class="flex flex-col gap-1 leading-none flex-1">
               <mj-text class="font-semibold text-xs line-clamp-1" group-hover="brand"> {{ file.fileName || 'N.C.' }} </mj-text>
-              <mj-text type="ternary" class="text-xxxxs"> {{ file.updatedAt }}</mj-text>
+              <mj-text type="secondary" class="text-xxxxs"> {{ file.updatedAt }}</mj-text>
             </div>
-            <a class="w-6 h-6 flex items-center justify-center hover_text-navy-dark" :href="file.fileUrl" target="_blank">
+            <a class="w-6 h-6 flex items-center justify-center hover_text-primary-dark" :href="file.fileUrl" target="_blank">
               <mj-download-icon />
             </a>
             <mj-circle-base class="h-6 w-6">

@@ -21,7 +21,7 @@
 
           <mj-checkbox />
           <mj-radio type="brand" />
-          <mj-true-false-toggle />
+          <mj-true-false-toggle v-model="isAdmin" />
           <mj-field class="my-2" label="Prénom" required>
             <mj-input type="text" />
             <template #message>
@@ -54,8 +54,8 @@ export default {
     return {
       selectValue: null,
       selectValues: [],
-      selectOptions: ['list', 'of', 'Quo sunt omnis accusamus alias odit quam, ex a ut non debitis, iste distinctio excepturi voluptas iusto aperiam placeat quas, quibusdam velit'
-      ]
+      selectOptions: ['list', 'of', 'Quo sunt omnis accusamus alias odit quam, ex a ut non debitis, iste distinctio excepturi voluptas iusto aperiam placeat quas, quibusdam velit'],
+      isAdmin: false
     };
   },
 };

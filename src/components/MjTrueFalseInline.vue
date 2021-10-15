@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-2 pl-4 pr-2 rounded">
+  <div class="flex items-center gap-4 bg-gray-100 dark_bg-dark-100 py-4 pl-4 pr-2 rounded">
     <mj-text class="text-xs flex-1"> {{ title }} </mj-text>
     <div class="min-w-[100px] flex justify-end">
       <mj-true-false v-if="!editing" :value="checked" />

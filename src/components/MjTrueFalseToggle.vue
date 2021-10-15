@@ -10,12 +10,14 @@
       @change="$emit('input', checked)"
     />
     <span
+      class=""
       :class="[
         spanClasses,
-        { 'text-white': !checked }
+        { 'text-primary': !checked }
       ]"
     >non</span>
     <span
+      class=""
       :class="[
         spanClasses,
         { 'text-white': checked }
@@ -33,7 +35,7 @@ export default {
   data() {
     return {
       checked: this.value || false,
-      spanClasses: 'text-xs text-center font-bold w-12 py-2 dark_text-white relative'
+      spanClasses: 'text-xs text-center font-bold w-12 py-2 relative duration-200',
     };
   }
 };
@@ -42,7 +44,7 @@ export default {
 <style scoped>
 .mj-true-false-toggle::before {
   content: '';
-  @apply absolute w-1/2 h-full rounded duration-200 bg-brand left-0;
+  @apply absolute w-1/2 h-full rounded duration-200 bg-white left-0;
 }
 .is-checked::before {
   content: '';

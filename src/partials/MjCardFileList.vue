@@ -1,5 +1,5 @@
 <template>
-  <mj-card class="my-4 w-[430px]">
+  <mj-card class="my-4 w-[26.875rem]">
     <div class="p-4">
       <div class="flex items-center gap-4">
         <mj-head-tag-counter :count="files.length" />

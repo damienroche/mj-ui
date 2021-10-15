@@ -21,6 +21,7 @@
 
           <mj-checkbox />
           <mj-radio type="brand" />
+          <mj-true-false-toggle />
           <mj-field class="my-2" label="Prénom" required>
             <mj-input type="text" />
             <template #message>

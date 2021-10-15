@@ -3,7 +3,7 @@
     <mj-card-file-list :files="files" @add="alert('Ajouter un document')" />
     <mj-card-file-list />
 
-    <mj-card class="my-4 w-[430px]">
+    <mj-card class="my-4 w-[26.875rem]">
       <div class="p-4">
         <div class="flex items-center justify-between gap-2 mb-4">
           <div class="leading-none">
@@ -20,14 +20,14 @@
           </mj-text>
         </div>
 
-        <div class="h-[40px] bg-inProgress rounded items-center justify-center flex select-none mb-2">
+        <div class="h-[2.5rem] bg-inProgress rounded items-center justify-center flex select-none mb-2">
           <div class="text-xs font-bold text-white">En cours</div>
         </div>
 
         <mj-flex-centered>
           <div class="flex flex-col items-center gap-1 leading-none">
             <mj-text type="secondary" class="text-xxxs">Référence interne :</mj-text>
-            <mj-text class="text-[13px] font-semibold">C-SESGN-6666</mj-text>
+            <mj-text class="text-[0.8125rem] font-semibold">C-SESGN-6666</mj-text>
           </div>
         </mj-flex-centered>
         <mj-field label="Types d'interventions :" class="mt-4">
@@ -73,7 +73,7 @@
       </mj-card-footer>
     </mj-card>
 
-    <mj-card class="my-4 w-[430px]">
+    <mj-card class="my-4 w-[26.875rem]">
       <div class="p-4">
         <div class="flex items-center gap-2 justify-between">
           <div class="flex items-center gap-2">
@@ -123,7 +123,7 @@
       </mj-card-footer>
     </mj-card>
 
-    <mj-card class="my-4 w-[430px]">
+    <mj-card class="my-4 w-[26.875rem]">
       <div class="p-4">
         <div class="p-2 flex items-center gap-2">
           <mj-head-tag-counter :count="6" />
@@ -148,7 +148,7 @@
       </mj-card-footer>
     </mj-card>
 
-    <mj-card class="w-[436px] my-4">
+    <mj-card class="w-[27.25rem] my-4">
       <div class="p-2">
         <div class="p-2 flex items-center gap-2">
           <mj-head-tag-counter :count="23" />
@@ -157,15 +157,15 @@
         <mj-horizontal-border class="my-4" />
         <mj-flex-centered class="my-3" text-center>
           <mj-text class="block text-xxxs" type="secondary">SIRET :</mj-text>
-          <mj-text class="block text-[13px] font-semibold" select type="normal">799999129932</mj-text>
+          <mj-text class="block text-[0.8125rem] font-semibold" select type="normal">799999129932</mj-text>
         </mj-flex-centered>
         <mj-flex-centered class="my-3" text-center>
           <mj-text class="block text-xxxs" type="secondary">TVA Intracommunautaire :</mj-text>
-          <mj-text class="block text-[13px] font-semibold" select>FR 795329 9129932</mj-text>
+          <mj-text class="block text-[0.8125rem] font-semibold" select>FR 795329 9129932</mj-text>
         </mj-flex-centered>
         <mj-flex-centered class="my-3" text-center>
           <mj-text class="block text-xxxs" type="secondary">Code client :</mj-text>
-          <mj-text class="block text-[13px] font-semibold" select>990A</mj-text>
+          <mj-text class="block text-[0.8125rem] font-semibold" select>990A</mj-text>
         </mj-flex-centered>
       </div>
       <mj-card-footer>
@@ -173,7 +173,7 @@
       </mj-card-footer>
     </mj-card>
 
-    <mj-card class="my-4 p-4 w-[430px]">
+    <mj-card class="my-4 p-4 w-[26.875rem]">
       <div class="flex items-center justify-between gap-4">
         <mj-text class="text-base font-bold">Notifications</mj-text>
         <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable @click.prevent="editNotifications = !editNotifications">

@@ -34,7 +34,7 @@
       </mj-stepper>
     </mj-card>
 
-    <mj-card class="p-4 my-4 w-[430px]">
+    <mj-card class="p-4 my-4 w-[26.875rem]">
       <mj-tab-wrapper>
         <mj-tab title="Tab 1">
           <mj-text class="my-3 block text-xs">Contenu tab 1</mj-text>
@@ -73,7 +73,7 @@
         <mj-button type="secondary" disabled>Ajouter</mj-button>
         <mj-button type="transparent">Ajouter</mj-button>
         <mj-button type="danger">Ajouter</mj-button>
-        <mj-button type="success" class="w-[200px]">Ajouter</mj-button>
+        <mj-button type="success" class="w-[12.5rem]">Ajouter</mj-button>
         <mj-add-button title="Ajouter un contact sur place" disabled />
         <mj-next-button title="Voir tous les ouvrages" />
         <mj-add-button title="Ajouter un contact sur place" />

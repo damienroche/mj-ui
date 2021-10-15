@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="text-center rounded px-3 py-2 text-xxs font-bold min-w-[50px] select-none"
+    class="text-center rounded px-3 py-2 text-xxs font-bold min-w-[3.125rem] select-none"
     :class="{ 'bg-brand text-white': value, 'bg-white dark_bg-dark text-text': !value }"
     v-bind="$attrs"
   >

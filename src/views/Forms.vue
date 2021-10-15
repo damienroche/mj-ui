@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mj-card class="my-4 p-4 w-[430px]">
+    <mj-card class="my-4 p-4 w-[26.875rem]">
       <h2 class="text-primary dark_text-white font-semibold mb-4">Formulaire</h2>
       <form @submit.prevent="submitForm">
         <!-- <fieldset disabled>  -->

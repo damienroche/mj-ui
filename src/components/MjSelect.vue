@@ -2,7 +2,7 @@
   <div
     :tabindex="searchable ? -1 : tabindex"
     :class="{ 'z-50': isOpen, 'pointer-events-none': disabled }"
-    class="mj-select text-left bg-white dark_bg-dark block box-content relative w-full min-h-[50px]"
+    class="mj-select text-left bg-white dark_bg-dark block box-content relative w-full min-h-[3.125rem]"
     role="combobox"
     :aria-owns="'listbox-'+id"
     @focus="activate()"
@@ -15,7 +15,7 @@
     <slot name="caret" :toggle="toggle">
       <div
         v-show="!loading"
-        class="flex items-center justify-center absolute box-border w-[40px] h-[48px] right-px top-px px-2 py-1 cursor-pointer z-10"
+        class="flex items-center justify-center absolute box-border w-10 h-12 right-px top-px px-2 py-1 cursor-pointer z-10"
         :class="{ 'opacity-25': disabled }"
         @mousedown.prevent.stop="toggle()"
       >
@@ -26,7 +26,7 @@
     <slot name="clear" :search="search"></slot>
     <div
       ref="tags"
-      class="px-2 flex-1 w-full bg-white dark_bg-dark-100 min-h-[50px] text-xs flex items-center flex-wrap border border-secondary-light dark_border-dark-200"
+      class="px-2 flex-1 w-full bg-white dark_bg-dark-100 min-h-[3.125rem] text-xs flex items-center flex-wrap border border-secondary-light dark_border-dark-200"
       :class="{
         'rounded-t': isOpen && !isAbove,
         'rounded-b': isOpen && isAbove,
@@ -42,13 +42,13 @@
       >
         <div
           v-show="visibleValues.length > 0"
-          class="inline-flex gap-[4px] my-2"
+          class="inline-flex gap-[0.25rem] my-2"
         >
           <template v-for="(option, index) of visibleValues" @mousedown.prevent>
             <slot name="tag" :option="option" :search="search" :remove="removeElement">
               <span
                 :key="index"
-                class="relative inline-block bg-primary dark_bg-dark py-2 pl-3 pr-8 text-xs font-semibold rounded text-white overflow-hidden max-w-full overflow-ellipsis select-none max-w-[200px] whitespace-nowrap"
+                class="relative inline-block bg-primary dark_bg-dark py-2 pl-3 pr-8 text-xs font-semibold rounded text-white overflow-hidden max-w-full overflow-ellipsis select-none max-w-[12.5rem] whitespace-nowrap"
                 :class="{ 'opacity-25': disabled }"
               >
                 <span v-text="getOptionLabel(option)"></span>
@@ -73,7 +73,7 @@
         </template>
       </slot>
       <slot name="loading">
-        <mj-loading-icon v-show="loading" class="h-5 w-5 absolute right-[12px]" />
+        <mj-loading-icon v-show="loading" class="h-5 w-5 absolute right-[0.75rem]" />
       </slot>
       <input
         v-if="searchable"
@@ -88,7 +88,7 @@
         :value="search"
         :disabled="disabled"
         :tabindex="tabindex"
-        class="pl-2 pr-10 focus_outline-none focus_ring-0 relative inline-block border-0 w-full !text-xs px-2 min-h-[50px] box-border !bg-transparent"
+        class="pl-2 pr-10 focus_outline-none focus_ring-0 relative inline-block border-0 w-full !text-xs px-2 min-h-[3.125rem] box-border !bg-transparent"
         :class="{
           'rounded-t': isOpen && !isAbove,
           'rounded-b': isOpen && isAbove,
@@ -106,7 +106,7 @@
       />
       <span
         v-if="isSingleLabelVisible"
-        class="min-h-[50px] inline-flex items-center text-xs w-full px-2 font-semibold"
+        class="min-h-[3.125rem] inline-flex items-center text-xs w-full px-2 font-semibold"
         :class="{ 'opacity-25': disabled }"
         @mousedown.prevent="toggle"
       >
@@ -116,7 +116,7 @@
       </span>
       <span
         v-if="isPlaceholderVisible"
-        class="text-gray-700 min-h-[50px] inline-flex items-center text-xs px-2 rounded"
+        class="text-gray-700 min-h-[3.125rem] inline-flex items-center text-xs px-2 rounded"
         :class="{ 'opacity-25': disabled }"
         @mousedown.prevent="toggle"
       >
@@ -129,7 +129,7 @@
       <div
         v-show="isOpen"
         ref="list"
-        class="absolute block bg-white dark_bg-dark max-h-[240px] overflow-auto z-10 border border-secondary-light dark_border-dark-200 min-w-full"
+        class="absolute block bg-white dark_bg-dark max-h-[15rem] overflow-auto z-10 border border-secondary-light dark_border-dark-200 min-w-full"
         :class="{
           'rounded-b border-t-0': !isAbove,
           'rounded-t bottom-full': isAbove
@@ -148,7 +148,7 @@
         >
           <slot name="beforeList"></slot>
           <li v-if="multiple && max === internalValue.length">
-            <span class="flex min-h-[50px] leading-none items-center px-4">
+            <span class="flex min-h-[3.125rem] leading-none items-center px-4">
               <slot name="maxElements">Un maximum de {{ max }} élements sont autorisés. Veuillez supprimer un élement pour un sélectionner un autre.</slot>
             </span>
           </li>
@@ -166,7 +166,7 @@
             >
               <span
                 v-if="!(option && (option.$isLabel || option.$isDisabled))"
-                class="flex min-h-[50px] leading-none items-center px-4"
+                class="flex min-h-[3.125rem] leading-none items-center px-4"
                 :class="{ 'bg-primary text-white' : isOptionHighlighted(index) }"
                 :data-select="option && option.isTag ? tagPlaceholder : selectLabelText"
                 :data-selected="selectedLabelText"
@@ -185,7 +185,7 @@
               </span>
               <span
                 v-if="option && (option.$isLabel || option.$isDisabled)"
-                class="flex min-h-[50px] leading-none items-center px-4"
+                class="flex min-h-[3.125rem] leading-none items-center px-4"
                 :data-select="groupSelect && selectGroupLabelText"
                 :data-deselect="groupSelect && deselectGroupLabelText"
                 :class="groupHighlight(index, option)"
@@ -199,12 +199,12 @@
             </li>
           </template>
           <li v-show="showNoResults && (filteredOptions.length === 0 && search && !loading)">
-            <span class="flex min-h-[50px] leading-none items-center px-4 text-xs font-semibold">
+            <span class="flex min-h-[3.125rem] leading-none items-center px-4 text-xs font-semibold">
               <slot name="noResult" :search="search">Aucun résultat.</slot>
             </span>
           </li>
           <li v-show="showNoOptions && (options.length === 0 && !search && !loading)">
-            <span class="flex min-h-[50px] leading-none items-center px-4">
+            <span class="flex min-h-[3.125rem] leading-none items-center px-4">
               <slot name="noOptions">List is empty.</slot>
             </span>
           </li>

@@ -176,9 +176,12 @@
     <mj-card class="my-4 p-4 w-[26.875rem]">
       <div class="flex items-center justify-between gap-4">
         <mj-text class="text-base font-bold">Notifications</mj-text>
-        <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable @click.prevent="editNotifications = !editNotifications">
-          <mj-edit-icon />
-        </mj-text>
+        <div class="h-[1.875rem] flex items-center">
+          <mj-text v-if="!editNotifications" type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable @click.prevent="editNotifications = !editNotifications">
+            <mj-edit-icon />
+          </mj-text>
+        </div>
+        <mj-process-button v-if="editNotifications" size="small" title="Mettre à jour" :loading="updatingNotifications" @click="fakeApiCall"></mj-process-button>
       </div>
       <div class="my-4">
         <mj-true-false-inline v-model="notifications.notifyClientOnCampaignPlanification" :editing="editNotifications" class="my-px" title="Informer le client de la planification du contrat" />
@@ -207,6 +210,7 @@ export default {
   },
   data() {
     return {
+      updatingNotifications: false,
       editNotifications: false,
       notifications: {
         notifyClientOnCampaignPlanification: true,
@@ -293,6 +297,13 @@ export default {
   methods: {
     alert(message) {
       alert(message);
+    },
+    fakeApiCall() {
+      this.updatingNotifications = true;
+      setTimeout(() => {
+        this.editNotifications = false;
+        this.updatingNotifications = false;
+      }, 3000);
     }
   }
 };

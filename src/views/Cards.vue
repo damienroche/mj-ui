@@ -176,15 +176,15 @@
     <mj-card class="my-4 p-4 w-[430px]">
       <div class="flex items-center justify-between gap-4">
         <mj-text class="text-base font-bold">Notifications</mj-text>
-        <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable>
+        <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable @click.prevent="editNotifications = !editNotifications">
           <mj-edit-icon />
         </mj-text>
       </div>
       <div class="my-4">
-        <mj-true-false-inline class="my-px" title="Informer le client de la planification du contrat" :value="true" />
-        <mj-true-false-inline class="my-px" title="Lorsque toutes les interventions seront planifiées" :value="true" />
-        <mj-true-false-inline class="my-px" title="Informer le client de la fin du contrat" :value="false" />
-        <mj-true-false-inline class="my-px" title="Lorsque toutes les interventions seront terminées" :value="false" />
+        <mj-true-false-inline v-model="notifications.notifyClientOnCampaignPlanification" :editing="editNotifications" class="my-px" title="Informer le client de la planification du contrat" />
+        <mj-true-false-inline v-model="notifications.notifyClientWhenAssignmentSchedules" :editing="editNotifications" class="my-px" title="Lorsque toutes les interventions seront planifiées" />
+        <mj-true-false-inline v-model="notifications.notifyClientOnCampaignFinished" :editing="editNotifications" class="my-px" title="Informer le client de la fin du contrat" />
+        <mj-true-false-inline v-model="notifications.notifyClientOnAssignmentFinished" :editing="editNotifications" class="my-px" title="Lorsque toutes les interventions seront terminées" />
         <mj-true-false-inline class="my-px" title="Définir une date personnalisée" :value="true" />
         <mj-field class="mt-3" label="Alert SMS + Email :">
           <div class="flex flex-wrap gap-2">
@@ -207,6 +207,13 @@ export default {
   },
   data() {
     return {
+      editNotifications: false,
+      notifications: {
+        notifyClientOnCampaignPlanification: true,
+        notifyClientWhenAssignmentSchedules: false,
+        notifyClientOnCampaignFinished: true,
+        notifyClientOnAssignmentFinished: true,
+      },
       files: [
         {
           fileContentType: 'image/jpeg',

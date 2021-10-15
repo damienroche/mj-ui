@@ -13,6 +13,7 @@
       'animation duration-150': hoverable,
       'group-hover_text-brand duration-150': groupHover === 'brand'
     }"
+    @click="$emit('click', $event)"
   >
     <slot />
   </component>

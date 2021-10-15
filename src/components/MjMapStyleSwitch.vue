@@ -3,7 +3,7 @@
     <a
       href="#!"
       class="text-xs font-bold rounded-full px-6 h-[30px] inline-flex items-center justify-center cursor-pointer"
-      :class="{ 'bg-navy text-white': value === 'satellite' }"
+      :class="{ 'bg-primary text-white': value === 'satellite' }"
       @click.prevent="setStyle('satellite')"
     >
       Satellite
@@ -11,7 +11,7 @@
     <a
       href="#!"
       class="text-xs font-bold rounded-full px-6 h-[30px] inline-flex items-center justify-center cursor-pointer"
-      :class="{ 'bg-navy text-white': value === 'roadmap' }"
+      :class="{ 'bg-primary text-white': value === 'roadmap' }"
       @click.prevent="setStyle('roadmap')"
     >
       Carte

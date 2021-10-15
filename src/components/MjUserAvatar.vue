@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-100 dark_bg-dark-100 rounded-xl flex items-center justify-center overflow-hidden" v-bind="$attrs">
     <img v-if="src" class="h-full w-full object-cover" :src="src" />
-    <mj-text v-if="!src" type="ternary" class="uppercase font-extrabold text-base leading-none p-2"> {{ initials }} </mj-text>
+    <mj-text v-if="!src" type="secondary" class="uppercase font-extrabold text-base leading-none p-2"> {{ initials }} </mj-text>
   </div>
 </template>
 

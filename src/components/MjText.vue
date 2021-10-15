@@ -3,9 +3,9 @@
     :is="tag"
     v-bind="$attrs"
     :class="{
-      'text-navy dark_text-white': type === 'normal',
+      'text-primary dark_text-white': type === 'normal',
       'text-brand': type === 'brand',
-      'text-ternary dark_text-gray-500': type === 'ternary',
+      'text-secondary dark_text-gray-500': type === 'secondary',
       'text-gray-500 dark_text-dark-200': type === 'gray-500',
       'select-none': !selectable,
       'hover_text-gray-600 dark_hover_text-gray-200': type === 'gray-500' && hoverable,
@@ -23,14 +23,14 @@ export default {
   name: 'MjText',
   props: {
     /**
-     * Text type, accepted values are `['normal', 'ternary', 'gray-500', 'success', 'brand']`
+     * Text type, accepted values are `['normal', 'secondary', 'gray-500', 'success', 'brand']`
      * @default 'normal'
      * @type {String}
     */
     type: {
       type: String,
       default: 'normal',
-      validator: value => ['normal', 'ternary', 'gray-500', 'success', 'brand'].indexOf(value) >= 0
+      validator: value => ['normal', 'secondary', 'gray-500', 'success', 'brand'].indexOf(value) >= 0
     },
     /**
      * If `true` users can select text.

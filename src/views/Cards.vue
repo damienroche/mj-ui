@@ -13,7 +13,7 @@
               </div>
               <span class="text-lg font-extrabold">INT-0628</span>
             </mj-text>
-            <mj-text type="ternary" class="block text-xxs">ID de campagne</mj-text>
+            <mj-text type="secondary" class="block text-xxs">ID de campagne</mj-text>
           </div>
           <mj-text type="gray-500" class="w-4 h-4" tag="a" href="#!" hoverable>
             <mj-edit-icon />
@@ -26,7 +26,7 @@
 
         <mj-flex-centered>
           <div class="flex flex-col items-center gap-1 leading-none">
-            <mj-text type="ternary" class="text-xxxs">Référence interne :</mj-text>
+            <mj-text type="secondary" class="text-xxxs">Référence interne :</mj-text>
             <mj-text class="text-[13px] font-semibold">C-SESGN-6666</mj-text>
           </div>
         </mj-flex-centered>
@@ -68,7 +68,7 @@
           <mj-text type="gray-500" class="w-4 h-4 flex-none block">
             <mj-clock-icon />
           </mj-text>
-          <mj-text type="ternary" class="text-xxxs">Fiche campagne créée le 12/09/2020</mj-text>
+          <mj-text type="secondary" class="text-xxxs">Fiche campagne créée le 12/09/2020</mj-text>
         </div>
       </mj-card-footer>
     </mj-card>
@@ -99,14 +99,14 @@
               <div class="flex items-start justify-between gap-2">
                 <div></div>
                 <div class="text-right flex flex-col gap-1 leading-none">
-                  <mj-text type="ternary" class="text-xxxs">Ref. interne :</mj-text>
+                  <mj-text type="secondary" class="text-xxxs">Ref. interne :</mj-text>
                   <mj-text class="duration-150 group-hover_text-brand text-xs font-semibold">C-SESGN-33336</mj-text>
                 </div>
               </div>
               <div class="flex items-start justify-between gap-2">
                 <div></div>
                 <div class="text-right flex flex-col gap-1 leading-none">
-                  <mj-text type="ternary" class="text-xxxs">Date :</mj-text>
+                  <mj-text type="secondary" class="text-xxxs">Date :</mj-text>
                   <mj-text class="duration-150 group-hover_text-brand text-xs font-semibold">28/08/2021</mj-text>
                 </div>
               </div>
@@ -156,15 +156,15 @@
         </div>
         <mj-horizontal-border class="my-4" />
         <mj-flex-centered class="my-3" text-center>
-          <mj-text class="block text-xxxs" type="ternary">SIRET :</mj-text>
+          <mj-text class="block text-xxxs" type="secondary">SIRET :</mj-text>
           <mj-text class="block text-[13px] font-semibold" select type="normal">799999129932</mj-text>
         </mj-flex-centered>
         <mj-flex-centered class="my-3" text-center>
-          <mj-text class="block text-xxxs" type="ternary">TVA Intracommunautaire :</mj-text>
+          <mj-text class="block text-xxxs" type="secondary">TVA Intracommunautaire :</mj-text>
           <mj-text class="block text-[13px] font-semibold" select>FR 795329 9129932</mj-text>
         </mj-flex-centered>
         <mj-flex-centered class="my-3" text-center>
-          <mj-text class="block text-xxxs" type="ternary">Code client :</mj-text>
+          <mj-text class="block text-xxxs" type="secondary">Code client :</mj-text>
           <mj-text class="block text-[13px] font-semibold" select>990A</mj-text>
         </mj-flex-centered>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-navy rounded overflow-hidden h-[60px] flex flex-col">
+  <div class="bg-primary rounded overflow-hidden h-[60px] flex flex-col">
     <div class="flex-1 p-3" @click="togglePlay">
       <div class="flex items-center justify-between gap-3">
         <div class="flex-1 flex items-center gap-3">

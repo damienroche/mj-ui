@@ -21,7 +21,7 @@
       class="absolute top-0 left-0 h-full rounded-full"
       :class="{
         'bg-brand': type === 'brand',
-        'bg-navy': type === 'navy',
+        'bg-primary': type === 'navy',
         'bg-success': type === 'success',
         'bg-danger': type === 'danger',
       }"

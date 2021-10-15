@@ -26,7 +26,7 @@
       <template v-else>
         <div
           :class="{
-            'text-navy dark_text-white': type === 'normal',
+            'text-primary dark_text-white': type === 'normal',
             'text-white': type !== 'normal'
           }"
           v-html="message"

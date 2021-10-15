@@ -8,7 +8,7 @@
       }"
     >
       <div class="text-xxxs w-full">
-        <mj-text type="ternary">{{ label }}</mj-text>
+        <mj-text type="secondary">{{ label }}</mj-text>
         <span
           v-if="required"
           class="text-danger"

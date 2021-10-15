@@ -11,9 +11,9 @@
         :class="{
           'h-8 text-xs font-bold': size === 'small',
           'bg-brand text-white': title === selectedTab && type === 'brand',
-          'bg-navy text-white': title === selectedTab && type === 'navy',
+          'bg-primary text-white': title === selectedTab && type === 'navy',
           'text-gray-600 dark_text-gray-500': title !== selectedTab,
-          'hover_bg-gray-200 hover_text-navy dark_hover_bg-dark-200 dark_hover_text-gray-500': title !== selectedTab && disabledTabs.indexOf(title) === -1,
+          'hover_bg-gray-200 hover_text-primary dark_hover_bg-dark-200 dark_hover_text-gray-500': title !== selectedTab && disabledTabs.indexOf(title) === -1,
           'rounded-full': rounded,
           'rounded': !rounded,
           'cursor-not-allowed': disabledTabs.indexOf(title) > -1

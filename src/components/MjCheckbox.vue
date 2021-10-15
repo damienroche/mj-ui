@@ -3,7 +3,7 @@
     type="checkbox"
     class="border-2 border-gray-400 rounded h-5 w-5"
     :class="{
-      'text-navy dark_bg-dark border-gray-400 dark_border-dark-100 focus_ring-gray-300': type === 'normal',
+      'text-primary dark_bg-dark border-gray-400 dark_border-dark-100 focus_ring-gray-300': type === 'normal',
       'text-brand': type === 'brand'
     }"
   />

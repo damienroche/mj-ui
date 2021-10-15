@@ -3,9 +3,9 @@
     v-bind="$attrs"
     class="h-[30px] rounded-full text-xs select-none px-3 inline-flex items-center justify-between gap-2 font-semibold duration-150"
     :class="{
-      'text-navy dark_text-gray-400 border border-gray-400': type === 'hollow',
-      'text-ternary dark_text-gray-500': type === 'ternary',
-      'hover_bg-navy hover_text-white dark_hover_bg-white dark_hover_text-navy': interactive
+      'text-primary dark_text-gray-400 border border-gray-400': type === 'hollow',
+      'text-secondary dark_text-gray-500': type === 'secondary',
+      'hover_bg-primary hover_text-white dark_hover_bg-white dark_hover_text-primary': interactive
     }"
   >
     <slot />
@@ -20,14 +20,14 @@ export default {
   name: 'MjTag',
   props: {
     /**
-     * Tag type, accepted values are `['hollow', 'secondary', 'brand', 'ternary']`
+     * Tag type, accepted values are `['hollow', 'secondary', 'brand', 'secondary']`
      * @default 'hollow'
      * @type {String}
     */
     type: {
       type: String,
       default: 'hollow',
-      validator: value => ['hollow', 'ternary'].indexOf(value) >= 0
+      validator: value => ['hollow', 'secondary'].indexOf(value) >= 0
     },
     /**
      * If true, the tag will be interactive, a delete button will be displayed

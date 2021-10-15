@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="content" class="bg-navy p-2 rounded text-white">
+    <div ref="content" class="bg-primary p-2 rounded text-white">
       <slot name="tooltip" />
     </div>
     <div ref="trigger" class="w-full" :class="{ 'flex': !inline, 'inline-flex': inline }">

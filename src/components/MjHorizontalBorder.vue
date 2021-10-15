@@ -1,5 +1,5 @@
 <template>
-  <div class="h-px bg-ternary-light dark_bg-dark-400 w-full"></div>
+  <div class="h-px bg-secondary-light dark_bg-dark-400 w-full"></div>
 </template>
 
 <script>

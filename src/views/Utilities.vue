@@ -1,7 +1,7 @@
 <template>
   <div>
     <mj-card class="my-4 p-4">
-      <h2 class="text-navy dark_text-white font-semibold mb-4">Overflow avec scrollbar custom</h2>
+      <h2 class="text-primary dark_text-white font-semibold mb-4">Overflow avec scrollbar custom</h2>
       <mj-fixed-height>
         <mj-flex-centered
           v-for="i in 30"

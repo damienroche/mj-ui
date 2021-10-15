@@ -6,7 +6,7 @@ export default {
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['normal', 'ternary', 'gray-500', 'success', 'brand'],
+      options: ['normal', 'secondary', 'gray-500', 'success', 'brand'],
     },
     hoverable: {
       control: { type: 'boolean' }

@@ -16,6 +16,7 @@ const ASSIGNMENT_STATUS_COLORS = {
   paid: '#955151'
 };
 
+
 const COLORS = {
   brand: {
     light: '#ebf3f8',
@@ -45,7 +46,7 @@ const COLORS = {
     600: '#aea8A8',
     700: '#a6a1a1',
   },
-  ternary: {
+  secondary: {
     DEFAULT: '#8a8da9',
     light: '#e6eaf1',
     dark: '#5f6178'
@@ -74,7 +75,7 @@ module.exports = {
   },
   theme: {
     extend: {
-      colors: { ...COLORS, ...ASSIGNMENT_STATUS_COLORS },
+      colors: { ...COLORS, ...ASSIGNMENT_STATUS_COLORS, primary: COLORS.navy },
       fontFamily: {
         sans: [
           '"Montserrat"',

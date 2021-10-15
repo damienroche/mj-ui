@@ -13,6 +13,16 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
+  src: null
+};
+
+export const Image = Template.bind({});
+Image.args = {
   src: 'https://gravatar.com/avatar/1f82b0492a0a938288c2d5b70534a1fb?s=400&d=robohash&r=x',
+  initials: 'DR'
+};
+
+export const Initials = Template.bind({});
+Initials.args = {
   initials: 'DR'
 };

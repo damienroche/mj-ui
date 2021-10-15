@@ -1,7 +1,7 @@
 <template>
   <span
     v-bind="$attrs"
-    class="h-[30px] rounded-full text-xs select-none px-3 inline-flex items-center justify-between gap-2 font-semibold duration-150"
+    class="h-[1.875rem] rounded-full text-xs select-none px-3 inline-flex items-center justify-between gap-2 font-semibold duration-150"
     :class="{
       'text-primary dark_text-gray-400 border border-gray-400': type === 'hollow',
       'text-secondary dark_text-gray-500': type === 'secondary',

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary rounded overflow-hidden h-[60px] flex flex-col">
+  <div class="bg-primary rounded overflow-hidden h-[3.75rem] flex flex-col">
     <div class="flex-1 p-3" @click="togglePlay">
       <div class="flex items-center justify-between gap-3">
         <div class="flex-1 flex items-center gap-3">
@@ -15,7 +15,7 @@
           </div>
           <div class="text-xs text-white">{{ title }}</div>
         </div>
-        <div class="text-[13px] text-white font-semibold"> {{ seekDisplay }} - {{ durationDisplay }} </div>
+        <div class="text-[0.8125rem] text-white font-semibold"> {{ seekDisplay }} - {{ durationDisplay }} </div>
       </div>
     </div>
     <mj-progress-bar

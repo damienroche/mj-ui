@@ -11,7 +11,8 @@
       'bg-danger text-white hover_bg-danger-dark': type === 'danger',
       'bg-transparent text-secondary hover_text-secondary-dark': type === 'transparent',
       'h-[2.5rem] text-xs px-4': size === 'normal',
-      'h-[1.875rem] text-xxs px-3': size === 'small'
+      'h-[1.875rem] text-xxs px-3': size === 'small',
+      'h-[1.625rem] w-[1.625rem] text-xxxs text-center': size === 'x-small'
     }"
     class="select-none relative inline-flex items-center justify-center rounded font-bold duration-150 disabled_cursor-not-allowed disabled_opacity-75 leading-none"
     @click="$emit('click')"
@@ -47,14 +48,14 @@ export default {
       validator: value => ['primary', 'secondary', 'transparent', 'brand', 'success', 'danger'].indexOf(value) >= 0
     },
     /**
-     * button size, accepted values are `'normal', 'small'`
+     * button size, accepted values are `'normal', 'small' and 'x-small'`
      * @default 'primary'
      * @type {String}
     */
     size: {
       type: String,
       default: 'normal',
-      validator: value => ['normal', 'small'].indexOf(value) >= 0
+      validator: value => ['normal', 'small', 'x-small'].indexOf(value) >= 0
     }
   },
   computed: {

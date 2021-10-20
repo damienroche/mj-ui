@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mj-pagination flex"
+    class="mj-pagination flex gap-3"
     :class="{
       'flex-col justify-center items-center': layout === 'vertical',
       'flex-row-reverse justify-between items-center': layout === 'horizontal'
@@ -8,7 +8,7 @@
   >
     <div
       v-if="lastPageIndex > 1"
-      class="flex mb-3"
+      class="flex"
     >
       <mj-button
         v-bind="arrow"

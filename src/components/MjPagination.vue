@@ -64,10 +64,10 @@
 </template>
 
 <script>
-import MjButton from '@/components/MjButton';
-import MjChevronLeft from '@/components/icons/MjChevronLeft';
-import MjChevronRight from '@/components/icons/MjChevronRight';
-import MjText from '@/components/MjText';
+import MjButton from './MjButton';
+import MjChevronLeft from './icons/MjChevronLeft';
+import MjChevronRight from './icons/MjChevronRight';
+import MjText from './MjText';
 
 export default {
   name: 'MjPagination',

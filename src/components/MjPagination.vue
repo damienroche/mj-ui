@@ -64,9 +64,9 @@
 </template>
 
 <script>
-import MjButton from './MjButton';
-import MjChevronLeft from './icons/MjChevronLeft';
-import MjChevronRight from './icons/MjChevronRight';
+import MjButton from './MjButton.vue';
+import MjChevronLeft from './icons/MjChevronLeft.vue';
+import MjChevronRight from './icons/MjChevronRight.vue';
 import MjText from './MjText';
 
 export default {

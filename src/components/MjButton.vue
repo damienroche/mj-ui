@@ -1,7 +1,6 @@
 <template>
   <component
     :is="buttonTag"
-    :style="styles"
     v-bind="$attrs"
     :class="{
       'bg-primary text-white hover_bg-primary-dark focus_bg-primary': type === 'primary',
@@ -59,11 +58,6 @@ export default {
     }
   },
   computed: {
-    styles() {
-      return {
-        width: this.fullWidth ? '100%' : this.width
-      };
-    },
     buttonTag() {
       if (this.$attrs.disabled !== undefined && this.$attrs.disabled !== false) {
         return 'button';

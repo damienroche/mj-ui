@@ -182,7 +182,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .number-list::before,
 .number-list::after {
   content: '...';

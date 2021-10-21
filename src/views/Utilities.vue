@@ -57,6 +57,8 @@
       <mj-image-slider
         v-model="slideIndex"
         :images="slideImages"
+        show-zoom
+        @zoom="onZoom"
       />
     </mj-card>
   </div>
@@ -105,6 +107,9 @@ export default {
         this.vehicles = res.data && res.data.vehicles ? res.data.vehicles : [];
         this.nbItems = parseInt(res.headers['x-pagination-total'], 10);
       });
+    },
+    onZoom(imageUrl) {
+      window.location.href = imageUrl;
     }
   }
 };

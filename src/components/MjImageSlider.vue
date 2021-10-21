@@ -14,7 +14,9 @@
             'translate-x-0 relative': value === index,
             'translate-x-full': value < index,
             '-translate-x-full': value > index,
+            'cursor-[zoom-in]': showZoom
           }"
+          @click="onImageClick(image)"
         />
       </template>
       <mj-flex-centered
@@ -106,12 +108,28 @@ export default {
     cover: {
       type: Boolean,
       default: true
+    },
+    /**
+     * emit @zoom event when user click on image + change cursor to zoom-in
+     * @default false
+     * @type {Boolean}
+     */
+    showZoom: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
       arrowClasses: 'absolute w-20 h-20 top-1/2 -mt-10 transition drop-shadow text-white'
     };
+  },
+  methods: {
+    onImageClick(image) {
+      if (this.showZoom) {
+        this.$emit('zoom', image);
+      }
+    }
   }
 };
 </script>

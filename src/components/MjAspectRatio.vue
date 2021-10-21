@@ -7,6 +7,7 @@
         backgroundSize: cover ? 'cover' : 'contain',
         paddingBottom: `${aspectRatio}%`
       }"
+      @click="$emit('click')"
     />
   </div>
 </template>

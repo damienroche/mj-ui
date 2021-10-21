@@ -1,5 +1,9 @@
 <template>
-  <div class="mj-image-slider relative">
+  <div
+    class="mj-image-slider relative"
+    tabindex="0"
+    @keyup="onSliderKeyUp"
+  >
     <div class="w-full relative overflow-hidden rounded">
       <template v-if="images.length > 0">
         <mj-aspect-ratio
@@ -129,6 +133,15 @@ export default {
       if (this.showZoom) {
         this.$emit('zoom', image);
       }
+    },
+    onSliderKeyUp(e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') {
+        return;
+      }
+      this.$emit('input', e.key === 'ArrowLeft'
+        ? this.value - 1 >= 0 ? this.value - 1 : 0
+        : this.value + 1 < this.images.length ? this.value + 1 : this.images.length - 1
+      );
     }
   }
 };

@@ -11,4 +11,3 @@ const Template = () => ({
 });
 
 export const Default = Template.bind({});
-

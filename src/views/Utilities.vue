@@ -52,6 +52,15 @@
         />
       </div>
     </mj-card>
+    <mj-card class="mt-4 p-4">
+      <h2 class="text-primary dark_text-white font-semibold mb-4">Image Slider</h2>
+      <mj-image-slider
+        v-model="slideIndex"
+        :images="slideImages"
+        show-zoom
+        @zoom="onZoom"
+      />
+    </mj-card>
   </div>
 </template>
 
@@ -64,7 +73,16 @@ export default {
       pageIndex: 0,
       nbItems: 0,
       perPage: 12,
-      vehicles: []
+      vehicles: [],
+      slideIndex: 0,
+      slideImages: [
+        'https://www.automobile-magazine.fr/asset/cms/800x449/167149/config/115964/peugeot-208.jpg',
+        'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/slideshow/slides/2020-03/5e7dc34562f44.jpg?itok=cE8-8n6B',
+        'https://www.automobile-magazine.fr/asset/cms/800x449/167149/config/115964/peugeot-208.jpg',
+        'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/slideshow/slides/2020-03/5e7dc34562f44.jpg?itok=cE8-8n6B',
+        'https://www.automobile-magazine.fr/asset/cms/800x449/167149/config/115964/peugeot-208.jpg',
+        'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/slideshow/slides/2020-03/5e7dc34562f44.jpg?itok=cE8-8n6B'
+      ]
     };
   },
   watch: {
@@ -89,6 +107,9 @@ export default {
         this.vehicles = res.data && res.data.vehicles ? res.data.vehicles : [];
         this.nbItems = parseInt(res.headers['x-pagination-total'], 10);
       });
+    },
+    onZoom(imageUrl) {
+      window.location.href = imageUrl;
     }
   }
 };

@@ -1,26 +1,23 @@
 <template>
-  <portal to="MjToast-target">
+  <portal to="MjSnackbar-target">
     <div
       v-if="isDisplayed"
       :key="id"
-      class="mj-toast transition max-w-[720px] mt-4 mx-4 rounded-full px-4 py-2 pointer-events-auto"
+      class="mj-snackbar absolute shadow-xl transition duration-200 min-w-[260px] max-w-[600px] m-4 p-5 bg-white dark_bg-dark rounded pointer-events-auto"
       :class="[
         {
-          'bg-white dark_bg-dark-200': type === 'normal',
-          'bg-success dark_bg-success': type === 'success',
-          'bg-danger dark_bg-danger': type === 'danger',
-          'bg-brand dark_bg-brand': type === 'brand',
-          'scale-110': animating
+          dismissible: dismissible
         },
-        animating ? `duration-${animationDuration}` : 'duration-200'
+        positionClasses
       ]"
       :style="translation"
       @click.stop
-      @mouseenter="onMouseEnter"
-      @mouseleave="onMouseLeave"
     >
-      <slot
-        v-bind="slotProps"
+      <slot v-bind="slotProps" />
+      <mj-close-button
+        v-if="dismissible"
+        class="absolute top-4 right-4"
+        @click="$insertManager.hide(id)"
       />
     </div>
   </portal>
@@ -29,21 +26,19 @@
 <script>
 import InsertMixin from './../mixins/InsertMixin.js';
 import SlideMixin from './../mixins/SlideMixin.js';
+import PositionMixin from './../mixins/PositionMixin.js';
 import TimeoutMixin from './../mixins/TimeoutMixin.js';
 import AnimateMixin from './../mixins/AnimateMixin.js';
+import MjCloseButton from './MjCloseButton.vue';
 
 export default {
-  name: 'MjToast',
-  mixins: [InsertMixin, SlideMixin, TimeoutMixin, AnimateMixin],
+  name: 'MjSnackbar',
+  components: { MjCloseButton },
+  mixins: [InsertMixin, SlideMixin, PositionMixin, TimeoutMixin, AnimateMixin],
   props: {
     pauseOnHover: {
       type: Boolean,
       default: false
-    },
-    type: {
-      type: String,
-      default: 'brand',
-      validator: value => ['normal', 'success', 'danger', 'brand'].indexOf(value) >= 0
     }
   },
   data() {
@@ -76,3 +71,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.mj-snackbar.dismissible > :first-child:not(.mj-close-button) {
+  @apply pr-12;
+}
+</style>

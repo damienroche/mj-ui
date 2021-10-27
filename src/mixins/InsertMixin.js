@@ -2,7 +2,11 @@ export default {
   props: {
     id: {
       type: String,
-      default: null
+      default: null,
+    },
+    dismissible: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -19,8 +23,12 @@ export default {
   created() {
     this.$insertManager.register({
       id: this.id,
-      type: 'MjSidePanel',
-      vNode: this
+      type: this.$options.name,
+      vNode: this,
+      onShow: this.onShow,
+      onHide: this.onHide,
+      onUpdate: this.onUpdate,
+      dismissible: this.dismissible
     });
     this.isInit = true;
   },
